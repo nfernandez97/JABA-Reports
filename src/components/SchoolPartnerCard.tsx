@@ -77,9 +77,26 @@ export function SchoolPartnerCard({ partner }: SchoolPartnerCardProps) {
   // Get actual top athletes for this school from leaderboard data
   const allTopPerformers = getTopPerformers(50); // Get more to ensure we have enough per school
 
-  // Normalize school name for matching (remove "University" and other suffixes)
+  // Normalize school name for matching
   const normalizeSchoolName = (name: string) => {
-    return name.replace(/ University| State University/gi, '').trim();
+    // Handle special cases first
+    const specialCases: Record<string, string> = {
+      'Louisiana State University': 'LSU',
+      'Washington State University': 'Washington State',
+      'University of Texas at San Antonio': 'UTSA',
+      'Texas A&M University': 'Texas A&M',
+      'Penn State University': 'Penn State',
+      'Auburn University': 'Auburn',
+      'Baylor University': 'Baylor',
+      'University of Virginia': 'Virginia',
+    };
+
+    if (specialCases[name]) {
+      return specialCases[name];
+    }
+
+    // Generic normalization: remove "University" suffix
+    return name.replace(/ University$/gi, '').trim();
   };
 
   const normalizedPartnerSchool = normalizeSchoolName(partner.schoolName);
@@ -87,9 +104,8 @@ export function SchoolPartnerCard({ partner }: SchoolPartnerCardProps) {
   const schoolTopAthletes = allTopPerformers
     .filter(athlete => {
       const normalizedAthleteSchool = normalizeSchoolName(athlete.school);
-      return normalizedAthleteSchool === normalizedPartnerSchool ||
-             athlete.school.includes(normalizedPartnerSchool) ||
-             normalizedPartnerSchool.includes(normalizedAthleteSchool);
+      return normalizedAthleteSchool.toLowerCase() === normalizedPartnerSchool.toLowerCase() ||
+             athlete.school.toLowerCase() === normalizedPartnerSchool.toLowerCase();
     })
     .slice(0, 3)
     .map(athlete => ({
