@@ -13,6 +13,7 @@ import {
 import { SchoolPartner, PlayflyPartnerTier } from '../data/playflyNetworkData';
 import { format } from 'date-fns';
 import { getSchoolById, SchoolConfig } from '../data/schoolConfig';
+import { getTopPerformers } from '../data/playflyIPAnalytics';
 
 interface SchoolPartnerCardProps {
   partner: SchoolPartner;
@@ -73,13 +74,17 @@ export function SchoolPartnerCard({ partner }: SchoolPartnerCardProps) {
     );
   };
 
-  // Sample top athletes (mocked - in production would come from props)
-  // Using generic names since real athlete data varies by school
-  const topAthletes = [
-    { name: `${partner.schoolName} QB`, sport: 'Football', likes: 3200000, comments: 89000 },
-    { name: `${partner.schoolName} RB`, sport: 'Football', likes: 2850000, comments: 78000 },
-    { name: `${partner.schoolName} Guard`, sport: 'Basketball', likes: 1450000, comments: 42000 },
-  ];
+  // Get actual top athletes for this school from leaderboard data
+  const allTopPerformers = getTopPerformers(50); // Get more to ensure we have enough per school
+  const schoolTopAthletes = allTopPerformers
+    .filter(athlete => athlete.school === partner.schoolName)
+    .slice(0, 3)
+    .map(athlete => ({
+      name: athlete.athleteName,
+      sport: athlete.sport,
+      likes: athlete.totalLikes,
+      comments: athlete.totalComments,
+    }));
 
   // Sport breakdown (mocked - in production would calculate from real data)
   const sportBreakdown = [
@@ -252,7 +257,7 @@ export function SchoolPartnerCard({ partner }: SchoolPartnerCardProps) {
                 </h4>
               </div>
               <div className="space-y-2">
-                {topAthletes.map((athlete, index) => (
+                {schoolTopAthletes.map((athlete, index) => (
                   <div key={index} className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-lg p-3 border border-amber-200">
                     <div className="flex items-center justify-between">
                       <div>
