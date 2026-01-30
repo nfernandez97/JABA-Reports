@@ -388,7 +388,7 @@ export function getTopPerformers(limit: number = 10): TopAthleteData[] {
       topPostEngagement: 122000,
     },
     {
-      athleteName: 'Cameron Ward',
+      athleteName: 'John Mateer',
       sport: 'Football',
       school: 'Washington State',
       totalLikes: 1650000,
@@ -398,7 +398,7 @@ export function getTopPerformers(limit: number = 10): TopAthleteData[] {
       topPostEngagement: 118000,
     },
     {
-      athleteName: 'Andrei Iosivas',
+      athleteName: 'Kyle Williams',
       sport: 'Football',
       school: 'Washington State',
       totalLikes: 1420000,
