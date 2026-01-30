@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { SchoolPartner, PlayflyPartnerTier } from '../data/playflyNetworkData';
 import { format } from 'date-fns';
+import { getSchoolById, SchoolConfig } from '../data/schoolConfig';
 
 interface SchoolPartnerCardProps {
   partner: SchoolPartner;
@@ -19,6 +20,9 @@ interface SchoolPartnerCardProps {
 
 export function SchoolPartnerCard({ partner }: SchoolPartnerCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  // Get school config for colors and logo
+  const schoolConfig: SchoolConfig | null = getSchoolById(partner.schoolId);
 
   // Format numbers with commas
   const formatNumber = (num: number): string => {
@@ -53,7 +57,10 @@ export function SchoolPartnerCard({ partner }: SchoolPartnerCardProps) {
   const getTierBadge = () => {
     if (partner.tier === PlayflyPartnerTier.MAX) {
       return (
-        <div className="flex items-center gap-1 bg-[#1770C0] text-white px-3 py-1 rounded-full text-xs font-bold">
+        <div
+          className="flex items-center gap-1 text-white px-3 py-1 rounded-full text-xs font-bold"
+          style={{ backgroundColor: schoolConfig?.primaryColor || '#1770C0' }}
+        >
           <Award className="w-3 h-3" />
           <span>PLAYFLY MAX</span>
         </div>
@@ -83,22 +90,49 @@ export function SchoolPartnerCard({ partner }: SchoolPartnerCardProps) {
   const maxSportAthletes = Math.max(...sportBreakdown.map(s => s.athletes));
 
   return (
-    <div className="bg-white border-t-4 border-[#1770C0] border-2 border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
+    <div
+      className="bg-white border-t-4 border-2 border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+      style={{ borderTopColor: schoolConfig?.primaryColor || '#1770C0' }}
+    >
       {/* Header Section */}
-      <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 border-b border-gray-200">
+      <div
+        className="p-6 border-b border-gray-200"
+        style={{
+          background: schoolConfig
+            ? `linear-gradient(135deg, ${schoolConfig.primaryColor}15 0%, ${schoolConfig.secondaryColor}15 100%)`
+            : 'linear-gradient(to-br, rgb(249, 250, 251) 0%, rgb(243, 244, 246) 100%)'
+        }}
+      >
         {/* School Name & Badges */}
         <div className="flex items-start justify-between mb-4">
           <div>
-            <h3 className="text-2xl font-bold text-[#091831] tracking-wide mb-1">
+            <h3
+              className="text-2xl font-bold tracking-wide mb-1"
+              style={{ color: schoolConfig?.primaryColor || '#091831' }}
+            >
               {partner.schoolName.toUpperCase()}
             </h3>
             <p className="text-gray-600 text-sm">{partner.mascot}</p>
           </div>
           <div className="text-right">
-            <div className="w-16 h-16 rounded-xl bg-white border-2 border-[#1770C0] flex items-center justify-center mb-2">
-              <span className="text-xs font-bold text-[#1770C0]">
-                {partner.schoolName.substring(0, 3).toUpperCase()}
-              </span>
+            <div
+              className="w-16 h-16 rounded-xl bg-white border-2 flex items-center justify-center mb-2 p-2"
+              style={{ borderColor: schoolConfig?.primaryColor || '#1770C0' }}
+            >
+              {schoolConfig?.logoUrl ? (
+                <img
+                  src={schoolConfig.logoUrl}
+                  alt={partner.schoolName}
+                  className="w-full h-full object-contain"
+                />
+              ) : (
+                <span
+                  className="text-xs font-bold"
+                  style={{ color: schoolConfig?.primaryColor || '#1770C0' }}
+                >
+                  {partner.schoolName.substring(0, 3).toUpperCase()}
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -121,36 +155,83 @@ export function SchoolPartnerCard({ partner }: SchoolPartnerCardProps) {
         {/* Section A: Social Media Performance */}
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-3">
-            <TrendingUp className="w-5 h-5 text-[#1770C0]" />
-            <h4 className="text-sm font-bold text-[#091831] uppercase tracking-wide">
+            <TrendingUp className="w-5 h-5" style={{ color: schoolConfig?.primaryColor || '#1770C0' }} />
+            <h4
+              className="text-sm font-bold uppercase tracking-wide"
+              style={{ color: schoolConfig?.primaryColor || '#091831' }}
+            >
               Social Media Performance
             </h4>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <div style={{ backgroundColor: 'rgba(23, 112, 192, 0.1)' }} className="rounded-lg p-3 border border-[#1770C0]">
-              <div className="text-2xl font-bold text-[#1770C0]">{formatNumber(partner.athletesTracked)}</div>
+            <div
+              className="rounded-lg p-3 border"
+              style={{
+                backgroundColor: schoolConfig ? `${schoolConfig.primaryColor}15` : 'rgba(23, 112, 192, 0.1)',
+                borderColor: schoolConfig?.primaryColor || '#1770C0'
+              }}
+            >
+              <div className="text-2xl font-bold" style={{ color: schoolConfig?.primaryColor || '#1770C0' }}>
+                {formatNumber(partner.athletesTracked)}
+              </div>
               <div className="text-xs text-gray-600">Athletes Tracked</div>
             </div>
-            <div style={{ backgroundColor: 'rgba(23, 112, 192, 0.1)' }} className="rounded-lg p-3 border border-[#1770C0]">
-              <div className="text-2xl font-bold text-[#1770C0]">{formatNumber(partner.totalPosts)}</div>
+            <div
+              className="rounded-lg p-3 border"
+              style={{
+                backgroundColor: schoolConfig ? `${schoolConfig.primaryColor}15` : 'rgba(23, 112, 192, 0.1)',
+                borderColor: schoolConfig?.primaryColor || '#1770C0'
+              }}
+            >
+              <div className="text-2xl font-bold" style={{ color: schoolConfig?.primaryColor || '#1770C0' }}>
+                {formatNumber(partner.totalPosts)}
+              </div>
               <div className="text-xs text-gray-600">Total Posts</div>
             </div>
-            <div style={{ backgroundColor: 'rgba(23, 112, 192, 0.1)' }} className="rounded-lg p-3 border border-[#1770C0]">
-              <div className="text-2xl font-bold text-[#1770C0]">{formatLargeNumber(partner.totalLikes)}</div>
+            <div
+              className="rounded-lg p-3 border"
+              style={{
+                backgroundColor: schoolConfig ? `${schoolConfig.primaryColor}15` : 'rgba(23, 112, 192, 0.1)',
+                borderColor: schoolConfig?.primaryColor || '#1770C0'
+              }}
+            >
+              <div className="text-2xl font-bold" style={{ color: schoolConfig?.primaryColor || '#1770C0' }}>
+                {formatLargeNumber(partner.totalLikes)}
+              </div>
               <div className="text-xs text-gray-600">Total Likes</div>
             </div>
-            <div style={{ backgroundColor: 'rgba(23, 112, 192, 0.1)' }} className="rounded-lg p-3 border border-[#1770C0]">
-              <div className="text-2xl font-bold text-[#1770C0]">{formatLargeNumber(partner.totalComments)}</div>
+            <div
+              className="rounded-lg p-3 border"
+              style={{
+                backgroundColor: schoolConfig ? `${schoolConfig.primaryColor}15` : 'rgba(23, 112, 192, 0.1)',
+                borderColor: schoolConfig?.primaryColor || '#1770C0'
+              }}
+            >
+              <div className="text-2xl font-bold" style={{ color: schoolConfig?.primaryColor || '#1770C0' }}>
+                {formatLargeNumber(partner.totalComments)}
+              </div>
               <div className="text-xs text-gray-600">Total Comments</div>
             </div>
-            <div style={{ backgroundColor: 'rgba(23, 112, 192, 0.1)' }} className="rounded-lg p-3 border border-[#1770C0]">
-              <div className="text-2xl font-bold text-[#1770C0]">
+            <div
+              className="rounded-lg p-3 border"
+              style={{
+                backgroundColor: schoolConfig ? `${schoolConfig.primaryColor}15` : 'rgba(23, 112, 192, 0.1)',
+                borderColor: schoolConfig?.primaryColor || '#1770C0'
+              }}
+            >
+              <div className="text-2xl font-bold" style={{ color: schoolConfig?.primaryColor || '#1770C0' }}>
                 {(partner.averageEngagementRate * 100).toFixed(1)}%
               </div>
               <div className="text-xs text-gray-600">Avg Engagement</div>
             </div>
-            <div style={{ backgroundColor: 'rgba(23, 112, 192, 0.1)' }} className="rounded-lg p-3 border border-[#1770C0]">
-              <div className="text-2xl font-bold text-[#1770C0]">
+            <div
+              className="rounded-lg p-3 border"
+              style={{
+                backgroundColor: schoolConfig ? `${schoolConfig.primaryColor}15` : 'rgba(23, 112, 192, 0.1)',
+                borderColor: schoolConfig?.primaryColor || '#1770C0'
+              }}
+            >
+              <div className="text-2xl font-bold" style={{ color: schoolConfig?.primaryColor || '#1770C0' }}>
                 {formatLargeNumber(partner.instagramFollowers + partner.tiktokFollowers)}
               </div>
               <div className="text-xs text-gray-600">Follower Base</div>
@@ -261,7 +342,10 @@ export function SchoolPartnerCard({ partner }: SchoolPartnerCardProps) {
         </button>
 
         {/* View Details Button */}
-        <button className="w-full mt-3 flex items-center justify-center gap-2 py-3 px-4 bg-[#1770C0] hover:opacity-90 text-white rounded-lg transition-all text-sm font-bold">
+        <button
+          className="w-full mt-3 flex items-center justify-center gap-2 py-3 px-4 hover:opacity-90 text-white rounded-lg transition-all text-sm font-bold"
+          style={{ backgroundColor: schoolConfig?.primaryColor || '#1770C0' }}
+        >
           <ExternalLink className="w-4 h-4" />
           <span>View Full Report</span>
         </button>
