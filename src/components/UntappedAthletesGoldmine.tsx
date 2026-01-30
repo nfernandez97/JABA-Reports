@@ -1,5 +1,4 @@
-import { Users, AlertCircle, DollarSign, TrendingUp } from 'lucide-react';
-import { PLAYFLY_MAX_PARTNERS } from '../data/playflyNetworkData';
+import { AlertCircle, DollarSign, TrendingUp } from 'lucide-react';
 
 export function UntappedAthletesGoldmine() {
   const totalAthletes = 15000;

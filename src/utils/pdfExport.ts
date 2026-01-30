@@ -1,7 +1,6 @@
 import jsPDF from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import { format } from 'date-fns';
-import { PLAYFLY_MAX_PARTNERS } from '../data/playflyNetworkData';
 import { getSchoolConferencePerformance } from '../data/networkRevenueMetrics';
 
 export function generateExecutiveReportPDF() {
@@ -262,14 +261,13 @@ export function generateExecutiveReportPDF() {
     formatCurrency(school.currentRevenue),
     `${(school.currentROI * 100).toFixed(0)}%`,
     formatCurrency(school.revenuePerAthlete),
-    formatCurrency(school.peerBenchmark),
     formatCurrency(school.revenueGap),
     school.performanceStatus === 'exceeding' ? 'OPTIMIZED' : school.performanceStatus === 'meeting' ? 'HIGH' : 'VERY HIGH',
   ]);
 
   autoTable(doc, {
     startY: 40,
-    head: [['School', 'Revenue', 'ROI', 'Rev/Athlete', 'Benchmark', 'Gap', 'Action']],
+    head: [['School', 'Revenue', 'ROI', 'Rev/Athlete', 'Gap', 'Action']],
     body: schoolTableData.slice(0, 8),
     theme: 'grid',
     headStyles: { fillColor: [37, 99, 235], fontSize: 8 },

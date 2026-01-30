@@ -1,16 +1,14 @@
-import { Target, TrendingUp, Users, Award, Building, Globe, DollarSign, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Target, TrendingUp, Users, Award, Globe, DollarSign, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export function RecommendationsAndNextSteps() {
   // Current state calculations
   const currentSchools = 40;
   const currentMAXSchools = 8;
   const currentBrands = 5;
-  const currentAthletes = 15000;
 
   // Target state
   const targetSchools = 70;
   const targetMAXSchools = 50;
-  const targetBrands = 50;
 
   // Revenue estimates
   const maxRevenuePerSchool = 1200000; // $1.2M per MAX school

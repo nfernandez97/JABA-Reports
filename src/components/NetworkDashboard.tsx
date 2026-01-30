@@ -1,10 +1,8 @@
 import { ThumbsUp, MessageCircle, Users, TrendingUp, Trophy, Calendar, Instagram, Music } from 'lucide-react';
 import { getNetworkMetrics } from '../data/playflyNetworkData';
-import { getIPPerformanceMetrics } from '../data/playflyIPAnalytics';
 
 export function NetworkDashboard() {
   const networkMetrics = getNetworkMetrics();
-  const ipMetrics = getIPPerformanceMetrics();
 
   // Platform split (estimated based on typical college sports social media)
   const instagramPercent = 58;

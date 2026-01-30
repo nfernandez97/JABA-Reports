@@ -16,6 +16,7 @@ export function ConservativeOpportunityEstimate() {
     effort: 'Medium',
     effortDetails: 'Sales training, deal review',
     confidence: 'High',
+    confidenceDetails: undefined,
   };
 
   // Scenario B: Activate 50% of Idle Athletes (12 months)

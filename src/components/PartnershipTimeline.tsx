@@ -1,4 +1,4 @@
-import { Calendar, Trophy, TrendingUp, Target, CheckCircle2 } from 'lucide-react';
+import { Trophy, TrendingUp, Target, CheckCircle2 } from 'lucide-react';
 
 export function PartnershipTimeline() {
   const timelineEvents = [

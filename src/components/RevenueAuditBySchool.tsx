@@ -1,4 +1,4 @@
-import { TrendingUp, TrendingDown, AlertCircle, CheckCircle2, DollarSign, Users } from 'lucide-react';
+import { TrendingUp, TrendingDown, AlertCircle, CheckCircle2, DollarSign } from 'lucide-react';
 import { getSchoolConferencePerformance, getConferenceRevenueMetrics } from '../data/networkRevenueMetrics';
 import { PlayflyPartnerTier } from '../data/playflyNetworkData';
 

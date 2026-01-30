@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, Download, TrendingUp, TrendingDown, Minus } from 'lucide-react';
+import { X, Download, TrendingUp } from 'lucide-react';
 import { SchoolPartner } from '../data/playflyNetworkData';
 import { format } from 'date-fns';
 
@@ -30,7 +30,7 @@ export function SchoolComparison({ schools, onClose }: SchoolComparisonProps) {
     return `${(num * 100).toFixed(1)}%`;
   };
 
-  const getHighestValue = (metric: keyof SchoolPartner, type: 'number' | 'percentage' = 'number') => {
+  const getHighestValue = (metric: keyof SchoolPartner) => {
     if (selectedSchools.length === 0) return null;
 
     const values = selectedSchools.map(s => {
@@ -231,7 +231,7 @@ export function SchoolComparison({ schools, onClose }: SchoolComparisonProps) {
                                   isHighest ? 'bg-green-50 text-green-900' : 'text-gray-900'
                                 }`}
                               >
-                                {metric.format(value)}
+                                {metric.format(numValue)}
                               </td>
                             );
                           })}

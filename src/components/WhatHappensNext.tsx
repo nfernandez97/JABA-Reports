@@ -24,7 +24,7 @@ export function WhatHappensNext() {
     {
       number: 1,
       title: 'Do nothing.',
-      description: 'Continue optimizing at current pace. You'll capture maybe 5-10% of this opportunity over 3 years.',
+      description: 'Continue optimizing at current pace. You\'ll capture maybe 5-10% of this opportunity over 3 years.',
       color: 'gray',
     },
     {

@@ -1,4 +1,4 @@
-import { Zap, TrendingUp, DollarSign, Users, Building, Target } from 'lucide-react';
+import { Zap, TrendingUp, Users, Building, Target } from 'lucide-react';
 
 export function IPValueAnalysisDetailed() {
   // The smoking gun: IP content gets 45% more engagement

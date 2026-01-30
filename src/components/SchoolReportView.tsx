@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, Download, Share2, Calendar, Menu, X, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Download, Share2, Menu, X, ChevronRight } from 'lucide-react';
 import { SchoolConfig } from '../data/schoolConfig';
 import { format } from 'date-fns';
 import { ExecutiveSummary } from './ExecutiveSummary';

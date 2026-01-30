@@ -2,7 +2,6 @@ import { DollarSign, AlertTriangle, TrendingUp } from 'lucide-react';
 
 export function UnderpricingProblem() {
   // Major brand deals analysis
-  const ipEngagementLift = 0.45;
 
   const brandDeals = [
     {

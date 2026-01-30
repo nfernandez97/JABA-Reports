@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Search, Filter, ArrowUpDown, Users, TrendingUp, MessageCircle, GitCompare } from 'lucide-react';
+import { Search, Filter, ArrowUpDown, Users, GitCompare } from 'lucide-react';
 import { SchoolPartner, PlayflyPartnerTier } from '../data/playflyNetworkData';
 import { SchoolPartnerCard } from './SchoolPartnerCard';
 import { SchoolComparison } from './SchoolComparison';

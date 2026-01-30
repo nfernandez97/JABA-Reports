@@ -1,4 +1,4 @@
-import { Zap, DollarSign, Target, CheckCircle2, TrendingUp } from 'lucide-react';
+import { Zap, Target, CheckCircle2 } from 'lucide-react';
 
 export function IPPremiumPlaybook() {
   // Current state vs IP Premium state
@@ -6,7 +6,6 @@ export function IPPremiumPlaybook() {
   const ipPremiumPercent = 0.30; // 30% premium (conservative vs 45% lift)
   const ipPremiumPostValue = basePostValue * (1 + ipPremiumPercent); // $650
 
-  const engagementLift = 0.45; // 45% engagement lift from data
 
   // Post types and their specific lifts
   const postTypes = [

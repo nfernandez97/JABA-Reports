@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Share2, Mail, Download, Link2, FileJson, FileSpreadsheet, Image, Check, FileText } from 'lucide-react';
+import { Share2, Mail, Link2, FileJson, FileSpreadsheet, Image, Check, FileText } from 'lucide-react';
 import { format } from 'date-fns';
 import { getNetworkMetrics, PLAYFLY_MAX_PARTNERS } from '../data/playflyNetworkData';
 import { getIPPerformanceMetrics } from '../data/playflyIPAnalytics';
@@ -11,7 +11,6 @@ interface ShareMenuProps {
 }
 
 export function ShareMenu({ onClose }: ShareMenuProps) {
-  const [copiedLink, setCopiedLink] = useState(false);
   const [showSuccess, setShowSuccess] = useState<string | null>(null);
 
   const showSuccessMessage = (message: string) => {
@@ -22,9 +21,7 @@ export function ShareMenu({ onClose }: ShareMenuProps) {
   const handleCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(window.location.href);
-      setCopiedLink(true);
       showSuccessMessage('Link copied to clipboard!');
-      setTimeout(() => setCopiedLink(false), 2000);
     } catch (err) {
       alert('Failed to copy link');
     }
