@@ -1,0 +1,7 @@
+# Exclude large data files
+src/data/socialMedia.roster_contents (5).json
+src/data/PlayFlyFull_roster_teams.json
+
+# Exclude development files
+*.md
+.DS_Store
