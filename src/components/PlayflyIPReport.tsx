@@ -249,33 +249,6 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
             {/* Accent bar */}
             <div className="h-1 w-40 bg-gradient-to-r from-[#3B9FD9] to-blue-500 mb-8" />
 
-            {/* Key findings - Bullet points */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-5xl">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[#1770C0]/20 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#3B9FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <div className="text-white">
-                  <div className="font-bold text-lg mb-1">We found:</div>
-                  <div className="text-gray-300">Only <span className="text-[#3B9FD9] font-bold">6% of your posts are monetized</span> — 38,266 high-performing posts untapped</div>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-[#1770C0]/20 flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-[#3B9FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                  </svg>
-                </div>
-                <div className="text-white">
-                  <div className="font-bold text-lg mb-1">Your network has:</div>
-                  <div className="text-gray-300"><span className="text-[#3B9FD9] font-bold">82% of athletes unsponsored</span> across 20 schools — massive revenue opportunity</div>
-                </div>
-              </div>
-            </div>
-
             {/* CTA / Value prop */}
             <div className="bg-white/10 backdrop-blur-sm border-2 border-[#1770C0]/50 rounded-xl p-6 max-w-4xl">
               <div className="flex items-center gap-4">
