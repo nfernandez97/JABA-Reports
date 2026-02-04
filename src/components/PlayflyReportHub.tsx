@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { Briefcase, Network, ArrowLeft, TrendingUp } from 'lucide-react';
+import { Briefcase, Network, ArrowLeft, TrendingUp, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { PlayflyNetworkReport } from './PlayflyNetworkReport';
 import BrandPartnershipDashboard from './BrandPartnershipDashboard';
+import { PlayflyIPReport } from './PlayflyIPReport';
 
-type View = 'hub' | 'network-report' | 'brand-partnerships';
+type View = 'hub' | 'network-report' | 'brand-partnerships' | 'ip-report';
 
 interface PlayflyReportHubProps {
   onBack: () => void;
@@ -32,6 +33,11 @@ export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
         <BrandPartnershipDashboard />
       </div>
     );
+  }
+
+  // IP Report view
+  if (activeView === 'ip-report') {
+    return <PlayflyIPReport onBack={() => setActiveView('hub')} />;
   }
 
   // Hub view - Clean minimal design
@@ -73,9 +79,9 @@ export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
         </div>
       </div>
 
-      {/* Cards - Clean Three Column Layout */}
+      {/* Cards - Clean Four Column Layout */}
       <div className="max-w-7xl mx-auto px-6 pb-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {/* Card 1: Dashboard */}
           <motion.button
@@ -175,6 +181,39 @@ export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
               {/* View button */}
               <div className="flex items-center gap-2 text-purple-400 text-sm font-semibold">
                 <span>View Analysis</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
+          </motion.button>
+
+          {/* Card 4: IP Impact Report */}
+          <motion.button
+            onClick={() => setActiveView('ip-report')}
+            className="group relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-yellow-400/50 transition-all duration-300 text-left w-full"
+            whileHover={{ scale: 1.02, y: -5 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <div className="relative z-10">
+              {/* Icon */}
+              <div className="w-14 h-14 bg-gradient-to-br from-yellow-500 to-[#1770C0] rounded-xl flex items-center justify-center mb-4">
+                <Award className="w-7 h-7 text-white" />
+              </div>
+
+              {/* Title */}
+              <h2 className="text-2xl font-bold text-white mb-3">
+                IP Impact Report
+              </h2>
+
+              {/* One-line description */}
+              <p className="text-gray-300 text-base mb-6">
+                How intellectual property signals drive engagement
+              </p>
+
+              {/* View button */}
+              <div className="flex items-center gap-2 text-yellow-400 text-sm font-semibold">
+                <span>View Report</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
