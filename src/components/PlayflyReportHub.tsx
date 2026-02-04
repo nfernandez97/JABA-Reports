@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Briefcase, ArrowLeft, TrendingUp, Award } from 'lucide-react';
+import { Briefcase, ArrowLeft, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 import BrandPartnershipDashboard from './BrandPartnershipDashboard';
 import { PlayflyIPReport } from './PlayflyIPReport';

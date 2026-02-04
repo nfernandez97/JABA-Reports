@@ -169,7 +169,7 @@ export async function exportToExcel(data: ExportData): Promise<void> {
 
   // Data Sheets
   if (data.tables && data.tables.length > 0) {
-    data.tables.forEach((table, index) => {
+    data.tables.forEach((table) => {
       const tableData = [table.headers, ...table.rows];
       const sheet = XLSX.utils.aoa_to_sheet(tableData);
 

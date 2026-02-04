@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { X, Download, FileText, FileSpreadsheet, FileImage } from 'lucide-react';
+import { X, Download, FileText, FileSpreadsheet } from 'lucide-react';
 
 interface ExportModalProps {
   isOpen: boolean;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Users, Building2, TrendingUp, AlertCircle, DollarSign, Eye, Download } from 'lucide-react';
+import { Users, Building2, TrendingUp, DollarSign, Eye, Download } from 'lucide-react';
 import { ExportModal } from './ExportModal';
 import { exportToPDF, exportToCSV, exportToExcel, ExportData } from '../utils/exportUtils';
 
@@ -42,7 +42,6 @@ export default function BrandPartnershipDashboard() {
   const schoolsWithTeamPageSponsors = teamPagePlacements.length;
   const schoolsWithZeroSponsors = 20 - schoolsWithTeamPageSponsors;
   const totalTeamPageValue = teamPagePlacements.reduce((sum, p) => sum + p.estimatedValue, 0);
-  const untappedTeamPageValue = schoolsWithZeroSponsors * 20000; // Estimate $20K/month per school
 
   useEffect(() => {
     async function loadSponsoredPosts() {

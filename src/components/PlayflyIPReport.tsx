@@ -65,7 +65,7 @@ interface PlayflyIPReportProps {
 }
 
 export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
-  const [timeRange, setTimeRange] = useState<7 | 14 | 30 | 90>(14);
+  const [timeRange] = useState<7 | 14 | 30 | 90>(14);
   const [selectedIPSignal, setSelectedIPSignal] = useState<'Logo' | 'Collaboration' | 'Mention'>('Logo');
   const [expandedSchool, setExpandedSchool] = useState<string | null>(null);
   const [sortColumn, setSortColumn] = useState<keyof SchoolIPData>('ipAdoptionRate');
