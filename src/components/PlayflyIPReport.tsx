@@ -230,6 +230,79 @@ export function PlayflyIPReport({ onBack }: PlayflyIPReportProps) {
       </div>
 
       <div className="max-w-[1600px] mx-auto px-8 py-8 space-y-12">
+        {/* JABA Hero Section - Data-Driven */}
+        <div className="relative overflow-hidden rounded-2xl shadow-2xl mb-8">
+          {/* Dark gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900" />
+
+          {/* Content */}
+          <div className="relative z-10 p-12">
+            {/* Headline with highlighted stat */}
+            <h2 className="text-5xl font-bold mb-8 leading-tight">
+              <span className="text-white">JABA analyzed </span>
+              <span className="text-[#3B9FD9] bg-[#1770C0]/20 px-3 py-1 rounded-lg">40,774 posts</span>
+              <span className="text-white"> and </span>
+              <span className="text-[#3B9FD9] bg-[#1770C0]/20 px-3 py-1 rounded-lg">2,487+ athletes</span>
+              <span className="text-white"> in your network to find hidden opportunities.</span>
+            </h2>
+
+            {/* Accent bar */}
+            <div className="h-1 w-40 bg-gradient-to-r from-[#3B9FD9] to-blue-500 mb-8" />
+
+            {/* Key findings - Bullet points */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-5xl">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-[#1770C0]/20 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3B9FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
+                <div className="text-white">
+                  <div className="font-bold text-lg mb-1">We found:</div>
+                  <div className="text-gray-300">Only <span className="text-[#3B9FD9] font-bold">6% of your posts are monetized</span> — 38,266 high-performing posts untapped</div>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-lg bg-[#1770C0]/20 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-[#3B9FD9]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <div className="text-white">
+                  <div className="font-bold text-lg mb-1">Your network has:</div>
+                  <div className="text-gray-300"><span className="text-[#3B9FD9] font-bold">82% of athletes unsponsored</span> across 20 schools — massive revenue opportunity</div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA / Value prop */}
+            <div className="bg-white/10 backdrop-blur-sm border-2 border-[#1770C0]/50 rounded-xl p-6 max-w-4xl">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-[#1770C0] to-blue-500 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div className="text-white">
+                  <div className="font-bold text-xl mb-1">JABA identifies, matches, and manages these opportunities automatically</div>
+                  <div className="text-gray-300 text-sm">Real-time campaign management across your entire network</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Transition arrow */}
+            <div className="mt-10 text-center">
+              <div className="inline-flex items-center gap-2 text-[#3B9FD9] font-semibold text-lg">
+                <span>Here's the full picture</span>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* SECTION 1: IP IMPACT OVERVIEW */}
         <section>
           <div className="flex items-center gap-3 mb-6">
