@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { ArrowLeft, Award, Trophy } from 'lucide-react';
+import { ArrowLeft, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { PlayflyIPReport } from './PlayflyIPReport';
 import { PlayflyIPPage } from './PlayflyIPPage';
 import { isReportEnabled } from '../config/reports';
 
-type View = 'hub' | 'ip-report' | 'ip-page';
+type View = 'hub' | 'ip-page';
 
 interface PlayflyReportHubProps {
   onBack: () => void;
@@ -13,11 +12,6 @@ interface PlayflyReportHubProps {
 
 export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
   const [activeView, setActiveView] = useState<View>('hub');
-
-  // IP Report view
-  if (activeView === 'ip-report') {
-    return <PlayflyIPReport onBack={() => setActiveView('hub')} />;
-  }
 
   // IP Page view
   if (activeView === 'ip-page') {
@@ -108,68 +102,33 @@ export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
             </motion.button>
           )}
 
-          {/* Card 2: IP Impact Report */}
-          {isReportEnabled('ip-report') && (
-            <motion.button
-              onClick={() => setActiveView('ip-report')}
-              className="group relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-yellow-400/50 transition-all duration-300 text-left w-full lg:col-span-2"
-              whileHover={{ scale: 1.02, y: -5 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <div className="relative z-10">
-                {/* Icon */}
-                <div className="w-14 h-14 bg-gradient-to-br from-yellow-500 to-[#1770C0] rounded-xl flex items-center justify-center mb-4">
-                  <Award className="w-7 h-7 text-white" />
-                </div>
-
-                {/* Title */}
-                <h2 className="text-2xl font-bold text-white mb-3">
-                  IP Impact Report
-                </h2>
-
-                {/* One-line description */}
-                <p className="text-gray-300 text-base mb-6">
-                  How intellectual property signals drive engagement
-                </p>
-
-                {/* View button */}
-                <div className="flex items-center gap-2 text-yellow-400 text-sm font-semibold">
-                  <span>View Report</span>
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </div>
-            </motion.button>
-          )}
-
-          {/* Card 3: IP Page */}
+          {/* Card 2: IP & Athlete Performance Report */}
           {isReportEnabled('ip-page') && (
             <motion.button
               onClick={() => setActiveView('ip-page')}
-              className="group relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-green-400/50 transition-all duration-300 text-left w-full lg:col-span-2"
+              className="group relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-[#FFFF00]/50 transition-all duration-300 text-left w-full lg:col-span-2"
               whileHover={{ scale: 1.02, y: -5 }}
               whileTap={{ scale: 0.98 }}
             >
               <div className="relative z-10">
                 {/* Icon */}
-                <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-[#1770C0] rounded-xl flex items-center justify-center mb-4">
-                  <Trophy className="w-7 h-7 text-white" />
+                <div className="w-14 h-14 bg-gradient-to-br from-[#FFFF00] to-[#1770C0] rounded-xl flex items-center justify-center mb-4">
+                  <Trophy className="w-7 h-7 text-slate-900" />
                 </div>
 
                 {/* Title */}
                 <h2 className="text-2xl font-bold text-white mb-3">
-                  IP Page
+                  IP & Athlete Performance
                 </h2>
 
                 {/* One-line description */}
                 <p className="text-gray-300 text-base mb-6">
-                  New IP analysis and performance insights
+                  Comprehensive IP impact, partnerships, and athlete analytics
                 </p>
 
                 {/* View button */}
-                <div className="flex items-center gap-2 text-green-400 text-sm font-semibold">
-                  <span>View Page</span>
+                <div className="flex items-center gap-2 text-[#FFFF00] text-sm font-semibold">
+                  <span>View Report</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

@@ -5,7 +5,7 @@
  * Set VITE_AVAILABLE_REPORTS to a comma-separated list of report IDs.
  */
 
-export type ReportId = 'playfly-dashboard' | 'ip-report' | 'ip-page' | 'brand-partnerships';
+export type ReportId = 'playfly-dashboard' | 'ip-page' | 'brand-partnerships';
 
 export interface ReportConfig {
   id: ReportId;
@@ -58,14 +58,9 @@ export function getAvailableReports(): ReportConfig[] {
       description: 'Real-time campaign management and athlete oversight'
     },
     {
-      id: 'ip-report',
-      name: 'IP Impact Report',
-      description: 'How intellectual property signals drive engagement'
-    },
-    {
       id: 'ip-page',
-      name: 'IP Page',
-      description: 'New IP analysis and performance insights'
+      name: 'IP & Athlete Performance Report',
+      description: 'Comprehensive IP impact, partnerships, and athlete analytics'
     },
     {
       id: 'brand-partnerships',
