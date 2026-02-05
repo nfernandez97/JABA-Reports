@@ -534,6 +534,57 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               )}
             </div>
 
+            {/* Network Stats Cards - Combined Playfly School Metrics */}
+            {selectedSchool === 'all' && (
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-2xl font-bold text-white">Network-Wide Performance</h4>
+                  <p className="text-white/60 text-sm mt-1">Combined metrics across all {networkTotals.totalSchools} Playfly partner schools</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <Users className="w-6 h-6 text-[#1770C0]" />
+                    </div>
+                    <div className="text-4xl font-bold text-[#FFFF00] mb-1">
+                      {formatNumber(networkTotals.totalFollowers)}
+                    </div>
+                    <div className="text-sm text-white/60">Total Followers</div>
+                  </div>
+
+                  <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <BarChart3 className="w-6 h-6 text-[#1770C0]" />
+                    </div>
+                    <div className="text-4xl font-bold text-white mb-1">
+                      {formatNumber(networkTotals.totalContents)}
+                    </div>
+                    <div className="text-sm text-white/60">Total Posts</div>
+                  </div>
+
+                  <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <TrendingUp className="w-6 h-6 text-[#1770C0]" />
+                    </div>
+                    <div className="text-4xl font-bold text-white mb-1">
+                      {formatNumber(networkTotals.totalLikes + networkTotals.totalComments)}
+                    </div>
+                    <div className="text-sm text-white/60">Total Engagement</div>
+                  </div>
+
+                  <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <Award className="w-6 h-6 text-[#1770C0]" />
+                    </div>
+                    <div className="text-4xl font-bold text-white mb-1">
+                      {formatEMV(networkTotals.totalEMV)}
+                    </div>
+                    <div className="text-sm text-white/60">Total EMV</div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Baseline Metrics Table - Only show in network view */}
             {selectedSchool === 'all' && (() => {
               // Max schools
@@ -763,51 +814,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                 </div>
               );
             })()}
-
-            {/* Key Metrics Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <Users className="w-6 h-6 text-[#1770C0]" />
-                </div>
-                <div className="text-4xl font-bold text-[#FFFF00] mb-1">
-                  {formatNumber(networkTotals.totalFollowers)}
-                </div>
-                <div className="text-sm text-white/60">
-                  {selectedSchool === 'all' ? 'Total Followers' : 'Followers'}
-                </div>
-              </div>
-
-              <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <BarChart3 className="w-6 h-6 text-[#1770C0]" />
-                </div>
-                <div className="text-4xl font-bold text-white mb-1">
-                  {formatNumber(networkTotals.totalContents)}
-                </div>
-                <div className="text-sm text-white/60">Total Posts</div>
-              </div>
-
-              <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <TrendingUp className="w-6 h-6 text-[#1770C0]" />
-                </div>
-                <div className="text-4xl font-bold text-white mb-1">
-                  {formatNumber(networkTotals.totalLikes + networkTotals.totalComments)}
-                </div>
-                <div className="text-sm text-white/60">Total Engagement</div>
-              </div>
-
-              <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <Award className="w-6 h-6 text-[#1770C0]" />
-                </div>
-                <div className="text-4xl font-bold text-white mb-1">
-                  {formatEMV(networkTotals.totalEMV)}
-                </div>
-                <div className="text-sm text-white/60">Total EMV</div>
-              </div>
-            </div>
 
             {/* Performance by IP Type - Three Cards */}
             <div>
