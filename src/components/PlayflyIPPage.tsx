@@ -195,12 +195,10 @@ const SCHOOL_FILE_MAP: Record<string, string> = {
   'University of Cincinnati': 'university-of-cincinnati',
   'University of Maryland': 'university-of-maryland',
   'University of Nebraska': 'university-of-nebraska',
-  'University of New Mexico': 'university-of-new-mexico',
   'University of Texas at San Antonio (UTSA)': 'university-of-texas-at-san-antonio-utsa',
   'University of Virginia': 'university-of-virginia',
   'Virginia Tech': 'virginia-tech',
-  'Washington State': 'washington-state',
-  'Wichita State University': 'wichita-state-university'
+  'Washington State': 'washington-state'
 };
 
 // Standardized display names - ensures consistent formatting across the UI
@@ -217,12 +215,10 @@ const SCHOOL_DISPLAY_NAMES: Record<string, string> = {
   'University of Cincinnati': 'University of Cincinnati',
   'University of Maryland': 'University of Maryland',
   'University of Nebraska': 'University of Nebraska',
-  'University of New Mexico': 'University of New Mexico',
   'University of Texas at San Antonio (UTSA)': 'University of Texas at San Antonio (UTSA)',
   'University of Virginia': 'University of Virginia (UVA)',
   'Virginia Tech': 'Virginia Tech',
-  'Washington State': 'Washington State University',
-  'Wichita State University': 'Wichita State University'
+  'Washington State': 'Washington State University'
 };
 
 // Helper function to get standardized display name
