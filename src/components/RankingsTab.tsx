@@ -361,7 +361,7 @@ export function RankingsTab({
                     <div className={`text-lg font-bold ${
                       rank.ipLift > 0 ? 'text-green-400' : rank.ipLift < 0 ? 'text-red-400' : 'text-white/60'
                     }`}>
-                      {rank.ipLift > 0 ? '+' : ''}{rank.ipLift.toFixed(1)}% {rank.ipLift > 0 ? '🔺' : rank.ipLift < 0 ? '🔻' : ''}
+                      {rank.ipLift > 0 ? '+' : ''}{rank.ipLift.toFixed(1)}% {rank.ipLift > 0 ? '▲' : rank.ipLift < 0 ? '▼' : ''}
                     </div>
                   </td>
                   <td className="px-6 py-4 text-right">
