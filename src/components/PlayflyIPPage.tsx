@@ -436,37 +436,38 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
           </div>
         </div>
 
-        {/* School Selector */}
-        <div className="mb-8 flex items-center justify-between">
-          <div>
-            <label className="text-sm text-white/60 mb-2 block">Select View</label>
-            <select
-              value={selectedSchool}
-              onChange={(e) => setSelectedSchool(e.target.value)}
-              className="bg-black/40 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none min-w-[300px]"
-            >
-              <option value="all">All Schools</option>
-              <optgroup label="Individual Schools">
-                {schoolsData.map((school) => (
-                  <option key={school.school._id} value={school.school.name}>
-                    {getDisplayName(school.school.name)}
-                  </option>
-                ))}
-              </optgroup>
-            </select>
+        {/* Sticky Header: School Selector + Tabs */}
+        <div className="sticky top-0 z-40 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pb-4 -mx-6 px-6 mb-8">
+          {/* School Selector */}
+          <div className="pt-4 pb-4 flex items-center justify-between">
+            <div>
+              <label className="text-sm text-white/60 mb-2 block">Select View</label>
+              <select
+                value={selectedSchool}
+                onChange={(e) => setSelectedSchool(e.target.value)}
+                className="bg-black/40 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none min-w-[300px]"
+              >
+                <option value="all">All Schools</option>
+                <optgroup label="Individual Schools">
+                  {schoolsData.map((school) => (
+                    <option key={school.school._id} value={school.school.name}>
+                      {getDisplayName(school.school.name)}
+                    </option>
+                  ))}
+                </optgroup>
+              </select>
+            </div>
+            {selectedSchool !== 'all' && (
+              <button
+                onClick={() => setSelectedSchool('all')}
+                className="text-[#3B9FD9] hover:text-white text-sm font-semibold"
+              >
+                ← Back to All Schools
+              </button>
+            )}
           </div>
-          {selectedSchool !== 'all' && (
-            <button
-              onClick={() => setSelectedSchool('all')}
-              className="text-[#3B9FD9] hover:text-white text-sm font-semibold"
-            >
-              ← Back to All Schools
-            </button>
-          )}
-        </div>
 
-        {/* Tabbed Navigation */}
-        <div className="mb-8">
+          {/* Tabbed Navigation */}
           <div className="flex gap-4 border-b border-white/20">
             <button
               onClick={() => setActiveTab('overview')}
