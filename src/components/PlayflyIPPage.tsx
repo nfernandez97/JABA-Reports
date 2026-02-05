@@ -437,7 +437,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
         </div>
 
         {/* Sticky Header: School Selector + Tabs */}
-        <div className="sticky top-0 z-40 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pb-4 -mx-6 px-6 mb-8">
+        <div className="sticky top-0 z-40 bg-[#091831] pb-4 -mx-6 px-6 mb-8 shadow-lg">
           {/* School Selector */}
           <div className="pt-4 pb-4 flex items-center justify-between">
             <div>
