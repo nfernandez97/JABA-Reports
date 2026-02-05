@@ -545,20 +545,28 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               const maxSchools = ['Michigan State', 'University of Maryland', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
 
               // Calculate baseline metrics for each school
-              const baselineData = schoolsData.map((school, index) => ({
-                rank: index + 1,
-                schoolName: getDisplayName(school.school.name),
-                schoolId: school.school._id,
-                isPlayflyMax: maxSchools.includes(school.school.name),
-                totalPosts: school.overall.totalContents,
-                sponsoredPosts: school.counts.withIp,
-                totalLikes: school.overall.totalLikes,
-                totalComments: school.overall.totalComments,
-                totalEngagement: school.overall.totalLikes + school.overall.totalComments,
-                avgEngagementPerPost: (school.overall.totalLikes + school.overall.totalComments) / school.overall.totalContents,
-                avgLikesPerPost: school.overall.totalLikes / school.overall.totalContents,
-                engagementRate: school.overall.engagementRate
-              }));
+              const baselineData = schoolsData.map((school, index) => {
+                // Find matching partnership data for this school
+                const partnershipData = _schoolPartnershipData.find(p => p.school._id === school.school._id);
+                const sponsoredPosts = partnershipData
+                  ? partnershipData.sponsorPartners.reduce((sum, partner) => sum + partner.totalContents, 0)
+                  : 0;
+
+                return {
+                  rank: index + 1,
+                  schoolName: getDisplayName(school.school.name),
+                  schoolId: school.school._id,
+                  isPlayflyMax: maxSchools.includes(school.school.name),
+                  totalPosts: school.overall.totalContents,
+                  sponsoredPosts: sponsoredPosts,
+                  totalLikes: school.overall.totalLikes,
+                  totalComments: school.overall.totalComments,
+                  totalEngagement: school.overall.totalLikes + school.overall.totalComments,
+                  avgEngagementPerPost: (school.overall.totalLikes + school.overall.totalComments) / school.overall.totalContents,
+                  avgLikesPerPost: school.overall.totalLikes / school.overall.totalContents,
+                  engagementRate: school.overall.engagementRate
+                };
+              });
 
               // Filter by search query
               const filteredData = baselineSearchQuery
