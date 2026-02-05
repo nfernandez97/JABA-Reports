@@ -515,37 +515,56 @@ export function PartnershipsTab({
                 <th className="px-6 py-4 text-left text-sm font-semibold text-white/80">#</th>
                 <th className="px-6 py-4 text-left text-sm font-semibold text-white/80">Brand</th>
                 <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Posts</th>
+                <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Avg Likes</th>
+                <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Avg Comments</th>
+                <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Total Engagement</th>
+                <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Engagement Rate</th>
                 <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">EMV</th>
                 <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Engagement Lift</th>
               </tr>
             </thead>
             <tbody>
-              {sortedPartners.map((partner, index) => (
-                <tr
-                  key={partner.sponsorPartner}
-                  className="border-b border-white/5 hover:bg-white/5 transition-colors"
-                >
-                  <td className="px-6 py-4 text-white/60 font-mono text-sm">
-                    {index + 1}
-                  </td>
-                  <td className="px-6 py-4 text-white font-semibold capitalize">
-                    {partner.sponsorPartner.replace(/_/g, ' ')}
-                  </td>
-                  <td className="px-6 py-4 text-right text-white/80 font-mono">
-                    {formatNumber(partner.totalContents)}
-                  </td>
-                  <td className="px-6 py-4 text-right text-green-400 font-bold font-mono">
-                    {formatEMV(partner.emv)}
-                  </td>
-                  <td className="px-6 py-4 text-right">
-                    <div className={`font-semibold ${
-                      partner.engagementRateLift > 0 ? 'text-green-400' : partner.engagementRateLift < 0 ? 'text-red-400' : 'text-white/60'
-                    }`}>
-                      {partner.engagementRateLift > 0 ? '+' : ''}{partner.engagementRateLift.toFixed(1)}%
-                    </div>
-                  </td>
-                </tr>
-              ))}
+              {sortedPartners.map((partner, index) => {
+                const totalEngagement = (partner.avgLikes + partner.avgComments) * partner.totalContents;
+                return (
+                  <tr
+                    key={partner.sponsorPartner}
+                    className="border-b border-white/5 hover:bg-white/5 transition-colors"
+                  >
+                    <td className="px-6 py-4 text-white/60 font-mono text-sm">
+                      {index + 1}
+                    </td>
+                    <td className="px-6 py-4 text-white font-semibold capitalize">
+                      {partner.sponsorPartner.replace(/_/g, ' ')}
+                    </td>
+                    <td className="px-6 py-4 text-right text-white/80 font-mono">
+                      {formatNumber(partner.totalContents)}
+                    </td>
+                    <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
+                      {formatNumber(partner.avgLikes)}
+                    </td>
+                    <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
+                      {formatNumber(partner.avgComments)}
+                    </td>
+                    <td className="px-6 py-4 text-right text-white font-bold font-mono">
+                      {formatNumber(totalEngagement)}
+                    </td>
+                    <td className="px-6 py-4 text-right text-white/80 font-mono">
+                      {(partner.engagementRate * 100).toFixed(2)}%
+                    </td>
+                    <td className="px-6 py-4 text-right text-green-400 font-bold font-mono">
+                      {formatEMV(partner.emv)}
+                    </td>
+                    <td className="px-6 py-4 text-right">
+                      <div className={`font-semibold ${
+                        partner.engagementRateLift > 0 ? 'text-green-400' : partner.engagementRateLift < 0 ? 'text-red-400' : 'text-white/60'
+                      }`}>
+                        {partner.engagementRateLift > 0 ? '+' : ''}{partner.engagementRateLift.toFixed(1)}%
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
