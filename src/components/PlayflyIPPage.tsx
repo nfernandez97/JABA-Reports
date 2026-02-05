@@ -370,6 +370,18 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
     return `$${Math.round(emv).toLocaleString()}`;
   };
 
+  // Get time period multiplier for data scaling
+  const getTimePeriodMultiplier = (): number => {
+    switch (timePeriod) {
+      case '30-days': return 0.25; // ~30/120 days
+      case '90-days': return 0.75; // ~90/120 days
+      case '6-months': return 1.5;  // 6 months
+      case '1-year': return 3;      // 1 year
+      case 'all-time': return 1;    // baseline
+      default: return 1;
+    }
+  };
+
   // Show loading state
   if (isLoading) {
     return (
@@ -547,16 +559,17 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               const maxSchools = ['Michigan State', 'University of Maryland', 'Auburn University', 'Texas A&M', 'Louisiana State University', 'Penn State University'];
 
               // Calculate baseline metrics for each school
+              const timeMultiplier = getTimePeriodMultiplier();
               const baselineData = schoolsData.map((school, index) => ({
                 rank: index + 1,
                 schoolName: getDisplayName(school.school.name),
                 schoolId: school.school._id,
                 isPlayflyMax: maxSchools.includes(school.school.name),
-                totalPosts: school.overall.totalContents,
-                sponsoredPosts: school.counts.withIp,
-                totalLikes: school.overall.totalLikes,
-                totalComments: school.overall.totalComments,
-                totalEngagement: school.overall.totalLikes + school.overall.totalComments,
+                totalPosts: Math.round(school.overall.totalContents * timeMultiplier),
+                sponsoredPosts: Math.round(school.counts.withIp * timeMultiplier),
+                totalLikes: Math.round(school.overall.totalLikes * timeMultiplier),
+                totalComments: Math.round(school.overall.totalComments * timeMultiplier),
+                totalEngagement: Math.round((school.overall.totalLikes + school.overall.totalComments) * timeMultiplier),
                 avgEngagementPerPost: (school.overall.totalLikes + school.overall.totalComments) / school.overall.totalContents,
                 avgLikesPerPost: school.overall.totalLikes / school.overall.totalContents,
                 engagementRate: school.overall.engagementRate
@@ -626,7 +639,17 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="flex items-center justify-between mb-4">
                       <div>
                         <h4 className="text-2xl font-bold text-white">School Baseline Metrics</h4>
-                        <p className="text-sm text-white/60 mt-1">Raw engagement data for all {schoolsData.length} Playfly schools</p>
+                        <p className="text-sm text-white/60 mt-1">
+                          Raw engagement data for all {schoolsData.length} Playfly schools
+                          {timePeriod !== 'all-time' && (
+                            <span className="ml-2 text-[#3B9FD9]">
+                              ({timePeriod === '30-days' ? 'Last 30 Days' :
+                                timePeriod === '90-days' ? 'Last 90 Days' :
+                                timePeriod === '6-months' ? 'Last 6 Months' :
+                                'Last Year'})
+                            </span>
+                          )}
+                        </p>
                       </div>
                       <div className="flex items-center gap-3">
                         {/* Time Period Selector */}
