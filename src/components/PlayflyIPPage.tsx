@@ -598,12 +598,12 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     bVal = b.sponsoredPosts;
                     break;
                   case 'totalLikes':
-                    aVal = a.totalLikes;
-                    bVal = b.totalLikes;
+                    aVal = a.avgLikesPerPost;
+                    bVal = b.avgLikesPerPost;
                     break;
                   case 'totalEngagement':
-                    aVal = a.totalEngagement;
-                    bVal = b.totalEngagement;
+                    aVal = a.avgEngagementPerPost;
+                    bVal = b.avgEngagementPerPost;
                     break;
                 }
 
@@ -703,7 +703,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                             className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
                           >
                             <div className="flex items-center justify-end gap-2">
-                              Total Likes
+                              Avg Likes Per Post
                               {baselineSortBy === 'totalLikes' && (
                                 <span>{baselineSortDirection === 'asc' ? '↑' : '↓'}</span>
                               )}
@@ -714,7 +714,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                             className="px-6 py-4 text-right text-sm font-semibold text-white/80 cursor-pointer hover:text-white"
                           >
                             <div className="flex items-center justify-end gap-2">
-                              Total Engagement
+                              Avg Engagement Per Post
                               {baselineSortBy === 'totalEngagement' && (
                                 <span>{baselineSortDirection === 'asc' ? '↑' : '↓'}</span>
                               )}
@@ -754,10 +754,10 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                 {formatFullNumber(school.sponsoredPosts)}
                               </td>
                               <td className={`px-6 py-4 text-right font-mono ${isTopPerformer ? 'text-green-400' : isLowPerformer ? 'text-white/40' : 'text-white'}`}>
-                                {formatFullNumber(school.totalLikes)}
+                                {formatFullNumber(school.avgLikesPerPost)}
                               </td>
                               <td className={`px-6 py-4 text-right font-mono font-bold ${isTopPerformer ? 'text-green-400' : isLowPerformer ? 'text-white/40' : 'text-white'}`}>
-                                {formatFullNumber(school.totalEngagement)}
+                                {formatFullNumber(school.avgEngagementPerPost)}
                               </td>
                             </tr>
                           );
