@@ -1146,7 +1146,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                     {/* Lift Metric */}
                                     <div className="mb-4">
                                       <div className={`text-3xl font-bold ${ipType.lift > 0 ? 'text-green-400' : ipType.lift < 0 ? 'text-red-400' : 'text-white/60'}`}>
-                                        {ipType.lift > 0 ? '+' : ''}{ipType.lift.toFixed(1)}% 🔺
+                                        {ipType.lift > 0 ? '+' : ''}{ipType.lift.toFixed(1)}% {ipType.lift > 0 ? '▲' : ipType.lift < 0 ? '▼' : ''}
                                       </div>
                                       <div className="text-xs text-white/60">vs No IP baseline</div>
                                     </div>
