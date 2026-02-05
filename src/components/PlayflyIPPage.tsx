@@ -444,7 +444,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               onChange={(e) => setSelectedSchool(e.target.value)}
               className="bg-black/40 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none min-w-[300px]"
             >
-              <option value="all">All Schools (Network View)</option>
+              <option value="all">All Schools</option>
               <optgroup label="Individual Schools">
                 {schoolsData.map((school) => (
                   <option key={school.school._id} value={school.school.name}>
