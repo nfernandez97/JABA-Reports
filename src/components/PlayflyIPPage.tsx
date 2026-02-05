@@ -415,7 +415,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               <span className="text-[#3B9FD9] bg-[#1770C0]/20 px-3 py-1 rounded-lg">{formatNumber(networkTotals.totalContents)} posts</span>
               <span className="text-white"> across </span>
               <span className="text-[#3B9FD9] bg-[#1770C0]/20 px-3 py-1 rounded-lg">{networkTotals.totalSchools} Playfly schools</span>
-              <span className="text-white"> to show how IP drives engagement and EMV.</span>
+              <span className="text-white"> to show how IP drives engagement.</span>
             </h2>
 
             {/* Accent bar */}
