@@ -459,7 +459,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               onClick={() => setSelectedSchool('all')}
               className="text-[#3B9FD9] hover:text-white text-sm font-semibold"
             >
-              ← Back to Network View
+              ← Back to All Schools
             </button>
           )}
         </div>
