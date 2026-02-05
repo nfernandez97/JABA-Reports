@@ -137,6 +137,8 @@ export function PartnershipsTab({
       totalEMV: number;
       avgEngagement: number;
       engagementLift: number[];
+      totalLikes: number;
+      totalComments: number;
     }>();
 
     schoolPartnershipData.forEach(school => {
@@ -148,6 +150,8 @@ export function PartnershipsTab({
           existing.totalEMV += partner.emv;
           existing.avgEngagement += partner.engagementRate;
           existing.engagementLift.push(partner.engagementRateLift);
+          existing.totalLikes += partner.avgLikes * partner.totalContents;
+          existing.totalComments += partner.avgComments * partner.totalContents;
         } else {
           allBrands.set(partner.sponsorPartner, {
             name: partner.sponsorPartner,
@@ -155,7 +159,9 @@ export function PartnershipsTab({
             schools: new Set([school.school.name]),
             totalEMV: partner.emv,
             avgEngagement: partner.engagementRate,
-            engagementLift: [partner.engagementRateLift]
+            engagementLift: [partner.engagementRateLift],
+            totalLikes: partner.avgLikes * partner.totalContents,
+            totalComments: partner.avgComments * partner.totalContents
           });
         }
       });
@@ -168,7 +174,10 @@ export function PartnershipsTab({
       schoolCount: brand.schools.size,
       totalEMV: brand.totalEMV,
       avgEngagement: brand.avgEngagement / brand.engagementLift.length,
-      avgLift: brand.engagementLift.reduce((sum, lift) => sum + lift, 0) / brand.engagementLift.length
+      avgLift: brand.engagementLift.reduce((sum, lift) => sum + lift, 0) / brand.engagementLift.length,
+      avgLikes: brand.totalLikes / brand.totalPosts,
+      avgComments: brand.totalComments / brand.totalPosts,
+      totalEngagement: brand.totalLikes + brand.totalComments
     }));
 
     // Sort by total EMV (descending)
@@ -385,6 +394,10 @@ export function PartnershipsTab({
                   <th className="px-6 py-4 text-left text-sm font-semibold text-white/80">Brand</th>
                   <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Total Posts</th>
                   <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Schools</th>
+                  <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Avg Likes</th>
+                  <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Avg Comments</th>
+                  <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Total Engagement</th>
+                  <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Engagement Rate</th>
                   <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Total EMV</th>
                   <th className="px-6 py-4 text-right text-sm font-semibold text-white/80">Avg Lift</th>
                 </tr>
@@ -408,6 +421,18 @@ export function PartnershipsTab({
                       <div className="text-[#3B9FD9] font-semibold">
                         {brand.schoolCount} / {schoolPartnershipData.length}
                       </div>
+                    </td>
+                    <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
+                      {formatNumber(brand.avgLikes)}
+                    </td>
+                    <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
+                      {formatNumber(brand.avgComments)}
+                    </td>
+                    <td className="px-6 py-4 text-right text-white font-bold font-mono">
+                      {formatNumber(brand.totalEngagement)}
+                    </td>
+                    <td className="px-6 py-4 text-right text-white/80 font-mono">
+                      {(brand.avgEngagement * 100).toFixed(2)}%
                     </td>
                     <td className="px-6 py-4 text-right text-green-400 font-bold font-mono">
                       {formatEMV(brand.totalEMV)}
