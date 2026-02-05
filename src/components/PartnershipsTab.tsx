@@ -231,9 +231,10 @@ export function PartnershipsTab({
         {/* Network Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
-            <div className="text-sm text-white/60 mb-2">Total Posts</div>
+            <div className="text-sm text-white/60 mb-2">Sponsored Posts</div>
             <div className="text-4xl font-bold text-[#3B9FD9]">
-              {formatNumber(schoolPartnershipData.reduce((sum, s) => sum + s.overall.totalContents, 0))}
+              {formatNumber(schoolPartnershipData.reduce((sum, s) =>
+                sum + s.sponsorPartners.reduce((pSum, p) => pSum + p.totalContents, 0), 0))}
             </div>
           </div>
           <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
