@@ -249,6 +249,8 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
   const [baselineSortBy, setBaselineSortBy] = useState<BaselineSortMetric>('rank');
   const [baselineSortDirection, setBaselineSortDirection] = useState<'asc' | 'desc'>('asc');
   const [baselineSearchQuery, setBaselineSearchQuery] = useState('');
+  type TimePeriod = '30-days' | '90-days' | '6-months' | '1-year' | 'all-time';
+  const [timePeriod, setTimePeriod] = useState<TimePeriod>('all-time');
 
   // Load school-specific IP impact data and brand partnership data
   useEffect(() => {
@@ -355,6 +357,11 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
     if (num >= 1000000) return `${(num / 1000000).toFixed(1)}M`;
     if (num >= 1000) return `${(num / 1000).toFixed(0)}K`;
     return num.toLocaleString();
+  };
+
+  // Format full numbers without abbreviations (for baseline metrics)
+  const formatFullNumber = (num: number): string => {
+    return Math.round(num).toLocaleString();
   };
 
   const formatEMV = (emv: number): string => {
@@ -622,6 +629,18 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                         <p className="text-sm text-white/60 mt-1">Raw engagement data for all {schoolsData.length} Playfly schools</p>
                       </div>
                       <div className="flex items-center gap-3">
+                        {/* Time Period Selector */}
+                        <select
+                          value={timePeriod}
+                          onChange={(e) => setTimePeriod(e.target.value as TimePeriod)}
+                          className="bg-black/60 border border-white/20 rounded-lg px-4 py-2 text-white text-sm focus:border-[#3B9FD9] focus:outline-none"
+                        >
+                          <option value="30-days">Last 30 Days</option>
+                          <option value="90-days">Last 90 Days</option>
+                          <option value="6-months">Last 6 Months</option>
+                          <option value="1-year">Last Year</option>
+                          <option value="all-time">All Time</option>
+                        </select>
                         <input
                           type="text"
                           placeholder="Search schools..."
@@ -735,16 +754,16 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                                 </div>
                               </td>
                               <td className={`px-6 py-4 text-right font-mono ${isTopPerformer ? 'text-green-400' : isLowPerformer ? 'text-white/40' : 'text-white'}`}>
-                                {formatNumber(school.totalPosts)}
+                                {formatFullNumber(school.totalPosts)}
                               </td>
                               <td className={`px-6 py-4 text-right font-mono ${isTopPerformer ? 'text-green-400' : isLowPerformer ? 'text-white/40' : 'text-white'}`}>
-                                {formatNumber(school.sponsoredPosts)}
+                                {formatFullNumber(school.sponsoredPosts)}
                               </td>
                               <td className={`px-6 py-4 text-right font-mono ${isTopPerformer ? 'text-green-400' : isLowPerformer ? 'text-white/40' : 'text-white'}`}>
-                                {formatNumber(school.totalLikes)}
+                                {formatFullNumber(school.totalLikes)}
                               </td>
                               <td className={`px-6 py-4 text-right font-mono font-bold ${isTopPerformer ? 'text-green-400' : isLowPerformer ? 'text-white/40' : 'text-white'}`}>
-                                {formatNumber(school.totalEngagement)}
+                                {formatFullNumber(school.totalEngagement)}
                               </td>
                             </tr>
                           );
