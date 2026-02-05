@@ -185,7 +185,6 @@ type TabType = 'overview' | 'with-vs-without' | 'partnerships' | 'athletes' | 'r
 const SCHOOL_FILE_MAP: Record<string, string> = {
   'Auburn University': 'auburn-university',
   'Baylor': 'baylor',
-  'Brigham Young University(BYU)': 'brigham-young-university-byu',
   'Louisiana State University': 'louisiana-state-university',
   'Michigan State': 'michigan-state',
   'Old Dominion University': 'old-dominion-university',
@@ -205,7 +204,6 @@ const SCHOOL_FILE_MAP: Record<string, string> = {
 const SCHOOL_DISPLAY_NAMES: Record<string, string> = {
   'Auburn University': 'Auburn University',
   'Baylor': 'Baylor University',
-  'Brigham Young University(BYU)': 'Brigham Young University (BYU)',
   'Louisiana State University': 'Louisiana State University (LSU)',
   'Michigan State': 'Michigan State University',
   'Old Dominion University': 'Old Dominion University (ODU)',
