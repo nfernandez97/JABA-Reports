@@ -20,49 +20,49 @@
   "orgInCaption": {
     "yes": {
       "contents": 803,
-      "likes": 726838,
-      "comments": 29669,
-      "engagementRate": 0.7332149603544211,
-      "emv": 17503.66
+      "likes": 905.1531755915317,
+      "comments": 36.94769613947696,
+      "engagementRate": 0.0009130945957091172,
+      "emv": 21.8
     },
     "no": {
       "contents": 3506,
-      "likes": 1828845,
-      "comments": 137686,
-      "engagementRate": 1.9059836183944632
+      "likes": 521.6329150028522,
+      "comments": 39.27153451226469,
+      "engagementRate": 0.0005436348027365838
     },
-    "avgLift": -61.53088865621748
+    "avgLift": 67.96102661432325
   },
   "collaboration": {
     "yes": {
       "contents": 22,
-      "likes": 16472,
-      "comments": 505,
-      "engagementRate": 0.016454296367299982,
-      "emv": 379.94
+      "likes": 748.7272727272727,
+      "comments": 22.954545454545453,
+      "engagementRate": 0.0007479225621499992,
+      "emv": 17.27
     },
     "no": {
       "contents": 4287,
-      "likes": 2539211,
-      "comments": 166850,
-      "engagementRate": 2.6227442823815843
+      "likes": 592.3048752041054,
+      "comments": 38.919990669465825,
+      "engagementRate": 0.0006117901288503812
     },
-    "avgLift": -99.37263055045692
+    "avgLift": 22.25149228141771
   },
   "logo": {
     "yes": {
       "contents": 467,
-      "likes": 417667,
-      "comments": 18794,
-      "engagementRate": 0.4230228336436424,
-      "emv": 10232.74
+      "likes": 894.3618843683083,
+      "comments": 40.2441113490364,
+      "engagementRate": 0.0009058304788943092,
+      "emv": 21.91
     },
     "no": {
       "contents": 3842,
-      "likes": 2138016,
-      "comments": 148561,
-      "engagementRate": 2.2161757451052417
+      "likes": 556.4851639770952,
+      "comments": 38.66762103071317,
+      "engagementRate": 0.0005768286686895475
     },
-    "avgLift": -80.9120357635015
+    "avgLift": 57.03631391140728
   }
 }

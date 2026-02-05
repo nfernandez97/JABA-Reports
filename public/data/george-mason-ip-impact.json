@@ -1,0 +1,68 @@
+{
+  "followers": 403604,
+  "school": {
+    "_id": "698263f3a7033318b33da125",
+    "name": "George Mason"
+  },
+  "overall": {
+    "totalContents": 1569,
+    "totalLikes": 481466,
+    "totalComments": 46858,
+    "engagementRate": 1.3090157679309422,
+    "emv": 14315.12
+  },
+  "counts": {
+    "hasOrganizationInCaption": 0,
+    "isOrganizationCollaboration": 0,
+    "hasOrganizationLogo": 0,
+    "withIp": 0
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 1569,
+      "likes": 306.861695347355,
+      "comments": 29.864882090503507,
+      "engagementRate": 0.0008342994059470632
+    },
+    "avgLift": -100
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 1569,
+      "likes": 306.861695347355,
+      "comments": 29.864882090503507,
+      "engagementRate": 0.0008342994059470632
+    },
+    "avgLift": -100
+  },
+  "logo": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 1569,
+      "likes": 306.861695347355,
+      "comments": 29.864882090503507,
+      "engagementRate": 0.0008342994059470632
+    },
+    "avgLift": -100
+  }
+}

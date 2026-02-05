@@ -20,18 +20,18 @@
   "orgInCaption": {
     "yes": {
       "contents": 839,
-      "likes": 3110135,
-      "comments": 36593,
-      "engagementRate": 1.7316993307589483,
-      "emv": 65862
+      "likes": 3706.954707985697,
+      "comments": 43.6150178784267,
+      "engagementRate": 0.002064003969915314,
+      "emv": 78.5
     },
     "no": {
       "contents": 2580,
-      "likes": 2824065,
-      "comments": 104109,
-      "engagementRate": 1.6114252506558409
+      "likes": 1094.5988372093022,
+      "comments": 40.35232558139535,
+      "engagementRate": 0.00062458343048676
     },
-    "avgLift": 7.463832408866413
+    "avgLift": 230.4608910785165
   },
   "collaboration": {
     "yes": {
@@ -43,26 +43,26 @@
     },
     "no": {
       "contents": 3419,
-      "likes": 5934200,
-      "comments": 140702,
-      "engagementRate": 3.343124581414789
+      "likes": 1735.653699912255,
+      "comments": 41.152968704299504,
+      "engagementRate": 0.0009778077161201489
     },
     "avgLift": -100
   },
   "logo": {
     "yes": {
       "contents": 529,
-      "likes": 1599353,
-      "comments": 23587,
-      "engagementRate": 0.8931322033114802,
-      "emv": 34345.76
+      "likes": 3023.351606805293,
+      "comments": 44.587901701323254,
+      "engagementRate": 0.0016883406489820042,
+      "emv": 64.93
     },
     "no": {
       "contents": 2890,
-      "likes": 4334847,
-      "comments": 117115,
-      "engagementRate": 2.449992378103309
+      "likes": 1499.9470588235295,
+      "comments": 40.5242214532872,
+      "engagementRate": 0.000847748227717408
     },
-    "avgLift": -63.54551094551122
+    "avgLift": 99.15590428633757
   }
 }
