@@ -843,7 +843,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div>
                       <div className="text-sm text-white/60 mb-1">Engagement Lift</div>
                       <div className="text-2xl font-bold text-green-400">
-                        {networkTotals.avgLogoLift > 0 ? '+' : ''}{networkTotals.avgLogoLift.toFixed(1)}%
+                        {networkTotals.avgLogoLift > 0 ? '+' : ''}{networkTotals.avgLogoLift.toFixed(2)}%
                       </div>
                       <div className="text-xs text-white/60 mt-1">
                         vs posts without logo
@@ -893,7 +893,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div>
                       <div className="text-sm text-white/60 mb-1">Engagement Lift</div>
                       <div className="text-2xl font-bold text-yellow-400">
-                        {networkTotals.avgCaptionLift > 0 ? '+' : ''}{networkTotals.avgCaptionLift.toFixed(1)}%
+                        {networkTotals.avgCaptionLift > 0 ? '+' : ''}{networkTotals.avgCaptionLift.toFixed(2)}%
                       </div>
                       <div className="text-xs text-white/60 mt-1">
                         vs posts without mentions
@@ -945,7 +945,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div>
                       <div className="text-sm text-white/60 mb-1">Engagement Lift</div>
                       <div className="text-2xl font-bold text-purple-400">
-                        {networkTotals.avgCollabLift > 0 ? '+' : ''}{networkTotals.avgCollabLift.toFixed(1)}%
+                        {networkTotals.avgCollabLift > 0 ? '+' : ''}{networkTotals.avgCollabLift.toFixed(2)}%
                       </div>
                       <div className="text-xs text-white/60 mt-1">
                         vs non-collaboration posts
