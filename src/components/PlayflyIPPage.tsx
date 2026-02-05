@@ -806,48 +806,6 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               </div>
             </div>
 
-            {/* IP Adoption Overview */}
-            <div className="bg-gradient-to-br from-[#1770C0]/20 to-blue-500/20 border-2 border-[#1770C0]/50 rounded-xl p-8">
-              <h4 className="text-2xl font-bold text-white mb-6">
-                {selectedSchool === 'all' ? 'Your Network\'s IP Adoption' : 'Your School\'s IP Adoption'}
-              </h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <div className="text-5xl font-bold text-[#3B9FD9] mb-3">
-                    {networkTotals.totalContents > 0
-                      ? ((networkTotals.totalWithIP / networkTotals.totalContents) * 100).toFixed(1)
-                      : 0}%
-                  </div>
-                  <div className="text-lg text-white mb-2">IP Adoption Rate</div>
-                  <div className="text-sm text-white/60">
-                    {formatNumber(networkTotals.totalWithIP)} of {formatNumber(networkTotals.totalContents)} posts feature {selectedSchool === 'all' ? 'school' : 'your school\'s'} IP
-                  </div>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <p className="text-white/80 mb-4">
-                    {selectedSchool === 'all'
-                      ? 'Across your network, athletes are leveraging school IP to drive higher engagement and EMV.'
-                      : 'Your school\'s athletes are leveraging school IP to create more valuable content.'
-                    }
-                  </p>
-                  <div className="flex items-center gap-4 text-sm">
-                    <div>
-                      <div className="text-2xl font-bold text-green-400">
-                        {formatNumber(networkTotals.totalWithIP)}
-                      </div>
-                      <div className="text-white/60">Posts with IP</div>
-                    </div>
-                    <div>
-                      <div className="text-2xl font-bold text-white/40">
-                        {formatNumber(networkTotals.totalContents - networkTotals.totalWithIP)}
-                      </div>
-                      <div className="text-white/60">Posts without IP</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Performance by IP Type - Three Cards */}
             <div>
               <h4 className="text-2xl font-bold text-white mb-6">Performance by IP Type</h4>
