@@ -1,0 +1,230 @@
+{
+  "school": {
+    "_id": "68ae4b4073bfe6b9db3b4862",
+    "name": "Auburn University"
+  },
+  "collaboration": {
+    "avgEmv": 437.97,
+    "avgLift": 64.64,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Keyshawn Hall",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 7,
+        "emv": 1135.2,
+        "engagementRate": 0.1166,
+        "lift": 70.04
+      },
+      {
+        "athlete": {
+          "name": "Emeka Opurum",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 156.22,
+        "engagementRate": 0.6937,
+        "lift": -14.83
+      },
+      {
+        "athlete": {
+          "name": "Elyjah Freeman",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 640,
+        "engagementRate": 1.1426,
+        "lift": 59.94
+      },
+      {
+        "athlete": {
+          "name": "Simon Walker",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 221.96,
+        "engagementRate": 0.4733,
+        "lift": 22.56
+      },
+      {
+        "athlete": {
+          "name": "Jeremiah Bowman",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 36.46,
+        "engagementRate": 0.5836,
+        "lift": 185.49
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 495.38,
+    "avgLift": 121.61,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Keyshawn Hall",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 17,
+        "emv": 2025.86,
+        "engagementRate": 0.085,
+        "lift": 19.46
+      },
+      {
+        "athlete": {
+          "name": "Ja'Mia Harris",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 13,
+        "emv": 108.82,
+        "engagementRate": 0.0195,
+        "lift": -48.41
+      },
+      {
+        "athlete": {
+          "name": "Liz Markovska",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 12,
+        "emv": 235.4,
+        "engagementRate": 0.2527,
+        "lift": 702.68
+      },
+      {
+        "athlete": {
+          "name": "Kaitlyn Duhon",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 11,
+        "emv": 44.42,
+        "engagementRate": 0.0963,
+        "lift": -13.34
+      },
+      {
+        "athlete": {
+          "name": "Mya Petticord",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 11,
+        "emv": 62.4,
+        "engagementRate": 0.0293,
+        "lift": -52.34
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 1190.62,
+    "avgLift": 678.41,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Lauren Dreves",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 18,
+        "emv": 277.12,
+        "engagementRate": 0.2444,
+        "lift": 1369.23
+      },
+      {
+        "athlete": {
+          "name": "Josiah Gilbert",
+          "sport": "MENS_GOLF"
+        },
+        "posts": 15,
+        "emv": 236.92,
+        "engagementRate": 0.1873,
+        "lift": 36.06
+      },
+      {
+        "athlete": {
+          "name": "Griffin Graves",
+          "sport": "BASEBALL"
+        },
+        "posts": 13,
+        "emv": 156.82,
+        "engagementRate": 0.2485,
+        "lift": -3.02
+      },
+      {
+        "athlete": {
+          "name": "Keyshawn Hall",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 12,
+        "emv": 2604.38,
+        "engagementRate": 0.1538,
+        "lift": 257.06
+      },
+      {
+        "athlete": {
+          "name": "Chase Fralick",
+          "sport": "BASEBALL"
+        },
+        "posts": 12,
+        "emv": 2677.84,
+        "engagementRate": 3.946,
+        "lift": 1732.72
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 62.08,
+    "avgLift": -47.91,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Daigle Wilson",
+          "sport": "SOFTBALL"
+        },
+        "posts": 10,
+        "emv": 5.78,
+        "engagementRate": 0.0021,
+        "lift": -98.57
+      },
+      {
+        "athlete": {
+          "name": "Jourdin Crawford",
+          "sport": "FOOTBALL"
+        },
+        "posts": 7,
+        "emv": 22.16,
+        "engagementRate": 0.0274,
+        "lift": -58.05
+      },
+      {
+        "athlete": {
+          "name": "Kensley Louidor-Faustin",
+          "sport": "FOOTBALL"
+        },
+        "posts": 7,
+        "emv": 35.76,
+        "engagementRate": 0.0242,
+        "lift": -80.29
+      },
+      {
+        "athlete": {
+          "name": "Mason Murphy",
+          "sport": "FOOTBALL"
+        },
+        "posts": 6,
+        "emv": 157.2,
+        "engagementRate": 0.4769,
+        "lift": 32.45
+      },
+      {
+        "athlete": {
+          "name": "Paul Thompson Jr.",
+          "sport": "FOOTBALL"
+        },
+        "posts": 6,
+        "emv": 89.52,
+        "engagementRate": 0.0956,
+        "lift": -35.11
+      }
+    ]
+  }
+}

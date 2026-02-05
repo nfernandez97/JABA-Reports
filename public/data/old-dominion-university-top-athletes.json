@@ -1,0 +1,230 @@
+{
+  "school": {
+    "_id": "691b2b339ee7e60ca0923d6b",
+    "name": "Old Dominion University"
+  },
+  "collaboration": {
+    "avgEmv": 88.94,
+    "avgLift": 56.12,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Trequan Jones",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 69.48,
+        "engagementRate": 0.5325,
+        "lift": 109.95
+      },
+      {
+        "athlete": {
+          "name": "Colton Joseph",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 327.54,
+        "engagementRate": 0.788,
+        "lift": 105
+      },
+      {
+        "athlete": {
+          "name": "Quinn Henicle",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 22.18,
+        "engagementRate": 0.1019,
+        "lift": -69.89
+      },
+      {
+        "athlete": {
+          "name": "Brandon Crutchfield",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 2,
+        "engagementRate": 0.009,
+        "lift": -88.84
+      },
+      {
+        "athlete": {
+          "name": "Zach Barlev",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 23.5,
+        "engagementRate": 1.0708,
+        "lift": 224.4
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 249.16,
+    "avgLift": 117.01,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Na'eem Abdul-Rahim Gladding",
+          "sport": "FOOTBALL"
+        },
+        "posts": 17,
+        "emv": 453.9,
+        "engagementRate": 0.5621,
+        "lift": 13.08
+      },
+      {
+        "athlete": {
+          "name": "Jahleel Culbreath",
+          "sport": "FOOTBALL"
+        },
+        "posts": 16,
+        "emv": 339.26,
+        "engagementRate": 0.3126,
+        "lift": 455.08
+      },
+      {
+        "athlete": {
+          "name": "Robert Davis Jr.",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 16,
+        "emv": 228.98,
+        "engagementRate": 0.0479,
+        "lift": -4.92
+      },
+      {
+        "athlete": {
+          "name": "Simaru Fields",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 16,
+        "emv": 40.9,
+        "engagementRate": 0.2247,
+        "lift": null
+      },
+      {
+        "athlete": {
+          "name": "Stephon Dubose-Bourne",
+          "sport": "FOOTBALL"
+        },
+        "posts": 15,
+        "emv": 182.78,
+        "engagementRate": 0.143,
+        "lift": 4.81
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 92.95,
+    "avgLift": 13.35,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Hama'ya Fielder",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 8,
+        "emv": 26.86,
+        "engagementRate": 0.0865,
+        "lift": -44.85
+      },
+      {
+        "athlete": {
+          "name": "Jerome Carter",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 90.46,
+        "engagementRate": 0.0957,
+        "lift": -48.92
+      },
+      {
+        "athlete": {
+          "name": "Donovan Raymond",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 8,
+        "emv": 32.88,
+        "engagementRate": 0.1668,
+        "lift": 119.32
+      },
+      {
+        "athlete": {
+          "name": "Na'eem Abdul-Rahim Gladding",
+          "sport": "FOOTBALL"
+        },
+        "posts": 7,
+        "emv": 245.28,
+        "engagementRate": 0.7591,
+        "lift": 70.61
+      },
+      {
+        "athlete": {
+          "name": "Kris Trinidad",
+          "sport": "FOOTBALL"
+        },
+        "posts": 7,
+        "emv": 69.28,
+        "engagementRate": 0.1938,
+        "lift": -29.39
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 19.82,
+    "avgLift": -48.52,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Robert Davis Jr.",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 6,
+        "emv": 27.88,
+        "engagementRate": 0.0171,
+        "lift": -69.11
+      },
+      {
+        "athlete": {
+          "name": "Ricardo Williams Jr.",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 63.74,
+        "engagementRate": 0.2218,
+        "lift": 55.16
+      },
+      {
+        "athlete": {
+          "name": "Dirrick Goodman",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 0.22,
+        "engagementRate": 0.0017,
+        "lift": -69.95
+      },
+      {
+        "athlete": {
+          "name": "Gabe Dombek",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 5.66,
+        "engagementRate": 0.0514,
+        "lift": -79
+      },
+      {
+        "athlete": {
+          "name": "Brandon Crutchfield",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 1.6,
+        "engagementRate": 0.0171,
+        "lift": -79.72
+      }
+    ]
+  }
+}

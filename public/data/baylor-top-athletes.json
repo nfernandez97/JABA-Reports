@@ -1,0 +1,230 @@
+{
+  "school": {
+    "_id": "686edb56a020985bba88c489",
+    "name": "Baylor"
+  },
+  "collaboration": {
+    "avgEmv": 396.86,
+    "avgLift": 123.37,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Gabe Craig",
+          "sport": "BASEBALL"
+        },
+        "posts": 9,
+        "emv": 86.76,
+        "engagementRate": 0.2743,
+        "lift": 66.75
+      },
+      {
+        "athlete": {
+          "name": "Bailey Warren",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 7,
+        "emv": 205.68,
+        "engagementRate": 0.9908,
+        "lift": 224.6
+      },
+      {
+        "athlete": {
+          "name": "Tounde Yessoufou",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 5,
+        "emv": 1327.26,
+        "engagementRate": 0.3805,
+        "lift": 220.89
+      },
+      {
+        "athlete": {
+          "name": "Jacob Redding",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 270.62,
+        "engagementRate": 1.1033,
+        "lift": 136.1
+      },
+      {
+        "athlete": {
+          "name": "Yuting Deng",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 5,
+        "emv": 93.96,
+        "engagementRate": 0.3852,
+        "lift": -31.48
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 293.46,
+    "avgLift": -5.71,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Taliah Scott",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 36,
+        "emv": 443.48,
+        "engagementRate": 0.0529,
+        "lift": 36.4
+      },
+      {
+        "athlete": {
+          "name": "Yuting Deng",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 14,
+        "emv": 247.42,
+        "engagementRate": 0.3558,
+        "lift": -49.56
+      },
+      {
+        "athlete": {
+          "name": "Josh Cameron",
+          "sport": "FOOTBALL"
+        },
+        "posts": 13,
+        "emv": 269.3,
+        "engagementRate": 0.1974,
+        "lift": -52.95
+      },
+      {
+        "athlete": {
+          "name": "Palmer Williams",
+          "sport": "FOOTBALL"
+        },
+        "posts": 12,
+        "emv": 364.26,
+        "engagementRate": 0.6539,
+        "lift": 14.85
+      },
+      {
+        "athlete": {
+          "name": "Ty Johnson",
+          "sport": "BASEBALL"
+        },
+        "posts": 12,
+        "emv": 142.84,
+        "engagementRate": 0.2756,
+        "lift": 22.72
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 428.62,
+    "avgLift": -3.26,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Taliah Scott",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 40,
+        "emv": 475.24,
+        "engagementRate": 0.0517,
+        "lift": 34.9
+      },
+      {
+        "athlete": {
+          "name": "Cameron Carr",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 24,
+        "emv": 832.16,
+        "engagementRate": 0.18,
+        "lift": 6.86
+      },
+      {
+        "athlete": {
+          "name": "Tyler Isgrig",
+          "sport": "WOMENS_SOCCER"
+        },
+        "posts": 19,
+        "emv": 334.76,
+        "engagementRate": 0.0818,
+        "lift": -71.59
+      },
+      {
+        "athlete": {
+          "name": "Yuting Deng",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 19,
+        "emv": 330.08,
+        "engagementRate": 0.3485,
+        "lift": -61.92
+      },
+      {
+        "athlete": {
+          "name": "Alyssa Jones",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 18,
+        "emv": 170.86,
+        "engagementRate": 0.1661,
+        "lift": 75.43
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 129.74,
+    "avgLift": -14.8,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Josh Cameron",
+          "sport": "FOOTBALL"
+        },
+        "posts": 9,
+        "emv": 519.34,
+        "engagementRate": 0.5864,
+        "lift": 156.44
+      },
+      {
+        "athlete": {
+          "name": "Callie Conrad",
+          "sport": "WOMENS_SOCCER"
+        },
+        "posts": 7,
+        "emv": 12.02,
+        "engagementRate": 0.0328,
+        "lift": -58.14
+      },
+      {
+        "athlete": {
+          "name": "Tiriah Kelley",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 6,
+        "emv": 30.54,
+        "engagementRate": 0.0543,
+        "lift": -84.39
+      },
+      {
+        "athlete": {
+          "name": "Gigi Lindsey",
+          "sport": "SOFTBALL"
+        },
+        "posts": 6,
+        "emv": 70.58,
+        "engagementRate": 0.034,
+        "lift": -70.78
+      },
+      {
+        "athlete": {
+          "name": "Makayla Vasquez",
+          "sport": "WOMENS_GYMNASTICS"
+        },
+        "posts": 5,
+        "emv": 16.22,
+        "engagementRate": 0.1447,
+        "lift": -17.11
+      }
+    ]
+  }
+}

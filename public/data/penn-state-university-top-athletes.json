@@ -1,0 +1,190 @@
+{
+  "school": {
+    "_id": "68eea2a92dc59d1b8e6f9ea9",
+    "name": "Penn State University"
+  },
+  "collaboration": {
+    "avgEmv": 166.42,
+    "avgLift": 330.8,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Matt DiMarsico",
+          "sport": "MENS_HOCKEY"
+        },
+        "posts": 1,
+        "emv": 166.42,
+        "engagementRate": 2.4387,
+        "lift": 330.8
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 635.64,
+    "avgLift": 13.21,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Kiyomi McMiller",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 19,
+        "emv": 424.96,
+        "engagementRate": 0.0094,
+        "lift": -62.72
+      },
+      {
+        "athlete": {
+          "name": "Addie Lyon",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 9,
+        "emv": 508.92,
+        "engagementRate": 0.9698,
+        "lift": -15.55
+      },
+      {
+        "athlete": {
+          "name": "Andrew Rappleyea",
+          "sport": "FOOTBALL"
+        },
+        "posts": 9,
+        "emv": 594.48,
+        "engagementRate": 0.4835,
+        "lift": 203.26
+      },
+      {
+        "athlete": {
+          "name": "Dani Dennis-Sutton",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 431.36,
+        "engagementRate": 0.1475,
+        "lift": -46.11
+      },
+      {
+        "athlete": {
+          "name": "Kaytron Allen",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 1218.48,
+        "engagementRate": 0.2578,
+        "lift": -12.81
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 974.48,
+    "avgLift": 11.84,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Gracie Merkle",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 18,
+        "emv": 217.52,
+        "engagementRate": 0.2463,
+        "lift": 72.14
+      },
+      {
+        "athlete": {
+          "name": "Kennedy Martin",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 17,
+        "emv": 1199.16,
+        "engagementRate": 0.1631,
+        "lift": -2.27
+      },
+      {
+        "athlete": {
+          "name": "Kaytron Allen",
+          "sport": "FOOTBALL"
+        },
+        "posts": 16,
+        "emv": 2971.8,
+        "engagementRate": 0.3177,
+        "lift": 31.78
+      },
+      {
+        "athlete": {
+          "name": "Liliah Gordon",
+          "sport": "WOMENS_CROSS_COUNTRY"
+        },
+        "posts": 15,
+        "emv": 114.62,
+        "engagementRate": 0.1684,
+        "lift": 0.99
+      },
+      {
+        "athlete": {
+          "name": "Kiyomi McMiller",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 14,
+        "emv": 369.32,
+        "engagementRate": 0.0111,
+        "lift": -43.44
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 215.79,
+    "avgLift": -71.59,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Liliah Gordon",
+          "sport": "WOMENS_CROSS_COUNTRY"
+        },
+        "posts": 19,
+        "emv": 91.58,
+        "engagementRate": 0.1236,
+        "lift": -46.67
+      },
+      {
+        "athlete": {
+          "name": "Maggie Mendelson",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 10,
+        "emv": 103.18,
+        "engagementRate": 0.0166,
+        "lift": -88.04
+      },
+      {
+        "athlete": {
+          "name": "Sydney Manning",
+          "sport": "WOMENS_LACROSSE"
+        },
+        "posts": 7,
+        "emv": 17.44,
+        "engagementRate": 0.0624,
+        "lift": -81.09
+      },
+      {
+        "athlete": {
+          "name": "Eduardo Cisternas",
+          "sport": "SWIMMING_AND_DIVING"
+        },
+        "posts": 7,
+        "emv": 244.78,
+        "engagementRate": 0.1103,
+        "lift": -56.41
+      },
+      {
+        "athlete": {
+          "name": "Maggie Golder",
+          "sport": "WOMENS_LACROSSE"
+        },
+        "posts": 7,
+        "emv": 621.96,
+        "engagementRate": 0.0889,
+        "lift": -85.74
+      }
+    ]
+  }
+}

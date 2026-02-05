@@ -1,0 +1,68 @@
+{
+  "followers": 1817133,
+  "school": {
+    "_id": "68e4810537aba442a4462956",
+    "name": "Texas A&M"
+  },
+  "overall": {
+    "totalContents": 3419,
+    "totalLikes": 5934200,
+    "totalComments": 140702,
+    "engagementRate": 3.343124581414789,
+    "emv": 132754.2
+  },
+  "counts": {
+    "hasOrganizationInCaption": 839,
+    "isOrganizationCollaboration": 0,
+    "hasOrganizationLogo": 529,
+    "withIp": 1107
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 839,
+      "likes": 3110135,
+      "comments": 36593,
+      "engagementRate": 1.7316993307589483,
+      "emv": 65862
+    },
+    "no": {
+      "contents": 2580,
+      "likes": 2824065,
+      "comments": 104109,
+      "engagementRate": 1.6114252506558409
+    },
+    "avgLift": 7.463832408866413
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 3419,
+      "likes": 5934200,
+      "comments": 140702,
+      "engagementRate": 3.343124581414789
+    },
+    "avgLift": -100
+  },
+  "logo": {
+    "yes": {
+      "contents": 529,
+      "likes": 1599353,
+      "comments": 23587,
+      "engagementRate": 0.8931322033114802,
+      "emv": 34345.76
+    },
+    "no": {
+      "contents": 2890,
+      "likes": 4334847,
+      "comments": 117115,
+      "engagementRate": 2.449992378103309
+    },
+    "avgLift": -63.54551094551122
+  }
+}

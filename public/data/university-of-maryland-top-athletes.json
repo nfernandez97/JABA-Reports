@@ -1,0 +1,179 @@
+{
+  "school": {
+    "_id": "68fc8b6f7804265f86eb4183",
+    "name": "University of Maryland"
+  },
+  "collaboration": {
+    "avgEmv": 0,
+    "avgLift": null,
+    "top5Athletes": []
+  },
+  "logo": {
+    "avgEmv": 769.15,
+    "avgLift": 130.4,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Addi Mack",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 17,
+        "emv": 347.7,
+        "engagementRate": 0.1339,
+        "lift": null
+      },
+      {
+        "athlete": {
+          "name": "Saylor Poffenbarger",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 17,
+        "emv": 511.7,
+        "engagementRate": 0.0414,
+        "lift": -10.23
+      },
+      {
+        "athlete": {
+          "name": "Malik Washington",
+          "sport": "FOOTBALL"
+        },
+        "posts": 15,
+        "emv": 1467.84,
+        "engagementRate": 0.1481,
+        "lift": 229.64
+      },
+      {
+        "athlete": {
+          "name": "Zahir Mathis",
+          "sport": "FOOTBALL"
+        },
+        "posts": 15,
+        "emv": 852,
+        "engagementRate": 0.5322,
+        "lift": 87.95
+      },
+      {
+        "athlete": {
+          "name": "Cam Rice",
+          "sport": "FOOTBALL"
+        },
+        "posts": 14,
+        "emv": 666.52,
+        "engagementRate": 0.1806,
+        "lift": 214.23
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 186.39,
+    "avgLift": 18.29,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Addi Mack",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 12,
+        "emv": 275.92,
+        "engagementRate": 0.1517,
+        "lift": 99.88
+      },
+      {
+        "athlete": {
+          "name": "Bri McDaniel",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 9,
+        "emv": 59.52,
+        "engagementRate": 0.0303,
+        "lift": -74.04
+      },
+      {
+        "athlete": {
+          "name": "Yarden Garzon",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 9,
+        "emv": 300.68,
+        "engagementRate": 0.1575,
+        "lift": -16.92
+      },
+      {
+        "athlete": {
+          "name": "Oluchi Okananwa",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 9,
+        "emv": 70.36,
+        "engagementRate": 0.0494,
+        "lift": 108.22
+      },
+      {
+        "athlete": {
+          "name": "Saylor Poffenbarger",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 9,
+        "emv": 225.46,
+        "engagementRate": 0.0353,
+        "lift": -25.71
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 17.03,
+    "avgLift": -31.78,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Jamare Glasker",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 32.6,
+        "engagementRate": 0.0823,
+        "lift": -69.98
+      },
+      {
+        "athlete": {
+          "name": "Josephine Kogler",
+          "sport": "WOMENS_GYMNASTICS"
+        },
+        "posts": 4,
+        "emv": 13.26,
+        "engagementRate": 0.046,
+        "lift": 40.42
+      },
+      {
+        "athlete": {
+          "name": "Oluchi Okananwa",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 22.8,
+        "engagementRate": 0.0507,
+        "lift": 55.88
+      },
+      {
+        "athlete": {
+          "name": "Octavian Smith Jr.",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 13.3,
+        "engagementRate": 0.0196,
+        "lift": -92.45
+      },
+      {
+        "athlete": {
+          "name": "Bri McDaniel",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 3.2,
+        "engagementRate": 0.0055,
+        "lift": -92.79
+      }
+    ]
+  }
+}

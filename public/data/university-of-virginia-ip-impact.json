@@ -1,0 +1,68 @@
+{
+  "followers": 2052253,
+  "school": {
+    "_id": "68f0d50ea227133e83ce965a",
+    "name": "University of Virginia"
+  },
+  "overall": {
+    "totalContents": 5926,
+    "totalLikes": 10488104,
+    "totalComments": 262988,
+    "engagementRate": 5.23867768740014,
+    "emv": 236060.88
+  },
+  "counts": {
+    "hasOrganizationInCaption": 1070,
+    "isOrganizationCollaboration": 36,
+    "hasOrganizationLogo": 459,
+    "withIp": 1344
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 1070,
+      "likes": 1091337,
+      "comments": 49315,
+      "engagementRate": 0.5558047667612132,
+      "emv": 26758.24
+    },
+    "no": {
+      "contents": 4856,
+      "likes": 9396767,
+      "comments": 213673,
+      "engagementRate": 4.6828729206389275
+    },
+    "avgLift": -88.1311157449607
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 36,
+      "likes": 63884,
+      "comments": 795,
+      "engagementRate": 0.03151609475050104,
+      "emv": 1357.18
+    },
+    "no": {
+      "contents": 5890,
+      "likes": 10424220,
+      "comments": 262193,
+      "engagementRate": 5.207161592649639
+    },
+    "avgLift": -99.39475481623255
+  },
+  "logo": {
+    "yes": {
+      "contents": 459,
+      "likes": 440856,
+      "comments": 19254,
+      "engagementRate": 0.2241975039139911,
+      "emv": 10742.52
+    },
+    "no": {
+      "contents": 5467,
+      "likes": 10047248,
+      "comments": 243734,
+      "engagementRate": 5.014480183486149
+    },
+    "avgLift": -95.5289981072749
+  }
+}

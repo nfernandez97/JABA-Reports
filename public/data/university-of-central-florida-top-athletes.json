@@ -1,0 +1,179 @@
+{
+  "school": {
+    "_id": "690235fdf719b77ba3f097f5",
+    "name": "University of Central Florida"
+  },
+  "collaboration": {
+    "avgEmv": 0,
+    "avgLift": null,
+    "top5Athletes": []
+  },
+  "logo": {
+    "avgEmv": 105.47,
+    "avgLift": 48.19,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Lena Elkins",
+          "sport": "SOFTBALL"
+        },
+        "posts": 10,
+        "emv": 88.52,
+        "engagementRate": 0.2227,
+        "lift": 82.84
+      },
+      {
+        "athlete": {
+          "name": "Avah Armour",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 9,
+        "emv": 103.6,
+        "engagementRate": 0.1152,
+        "lift": -71.21
+      },
+      {
+        "athlete": {
+          "name": "Ethan Higgins",
+          "sport": "FOOTBALL"
+        },
+        "posts": 9,
+        "emv": 41.18,
+        "engagementRate": 0.1919,
+        "lift": 250.84
+      },
+      {
+        "athlete": {
+          "name": "Mikayla Porter",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 8,
+        "emv": 108.92,
+        "engagementRate": 0.2122,
+        "lift": 13.21
+      },
+      {
+        "athlete": {
+          "name": "Taevion Swint",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 185.14,
+        "engagementRate": 0.1912,
+        "lift": -34.72
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 65.28,
+    "avgLift": 13.99,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Connor Meadows",
+          "sport": "FOOTBALL"
+        },
+        "posts": 9,
+        "emv": 127.62,
+        "engagementRate": 0.2883,
+        "lift": 37.26
+      },
+      {
+        "athlete": {
+          "name": "Devan Cambridge",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 6,
+        "emv": 15,
+        "engagementRate": 0.0007,
+        "lift": -98.76
+      },
+      {
+        "athlete": {
+          "name": "Taevion Swint",
+          "sport": "FOOTBALL"
+        },
+        "posts": 6,
+        "emv": 139.34,
+        "engagementRate": 0.2202,
+        "lift": -10.42
+      },
+      {
+        "athlete": {
+          "name": "Noah Senka",
+          "sport": "FOOTBALL"
+        },
+        "posts": 6,
+        "emv": 12.64,
+        "engagementRate": 0.0349,
+        "lift": 42.03
+      },
+      {
+        "athlete": {
+          "name": "Tyreek'e Robinson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 31.78,
+        "engagementRate": 0.5044,
+        "lift": 99.85
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 27.61,
+    "avgLift": -61.19,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Gaard Memmelaar",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 7.72,
+        "engagementRate": 0.0133,
+        "lift": -96.64
+      },
+      {
+        "athlete": {
+          "name": "Sarah Mendoza",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 7,
+        "emv": 17.84,
+        "engagementRate": 0.0656,
+        "lift": -51.77
+      },
+      {
+        "athlete": {
+          "name": "Keegan Smith",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 51.68,
+        "engagementRate": 0.1489,
+        "lift": -29.24
+      },
+      {
+        "athlete": {
+          "name": "Carter Miller",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 43.58,
+        "engagementRate": 0.1725,
+        "lift": -67.18
+      },
+      {
+        "athlete": {
+          "name": "Owen Spell",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 17.22,
+        "engagementRate": 0.0691,
+        "lift": -61.13
+      }
+    ]
+  }
+}

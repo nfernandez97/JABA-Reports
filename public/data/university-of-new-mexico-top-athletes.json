@@ -1,0 +1,190 @@
+{
+  "school": {
+    "_id": "697a73807ef35a6cd86b9524",
+    "name": "University of New Mexico"
+  },
+  "collaboration": {
+    "avgEmv": 138.84,
+    "avgLift": 157.63,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Jack Layne",
+          "sport": "FOOTBALL"
+        },
+        "posts": 5,
+        "emv": 192.34,
+        "engagementRate": 0.3649,
+        "lift": 111.79
+      },
+      {
+        "athlete": {
+          "name": "Jaxton Eck",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 241.9,
+        "engagementRate": 0.986,
+        "lift": 277.4
+      },
+      {
+        "athlete": {
+          "name": "David Murphy",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 207.94,
+        "engagementRate": 0.7444,
+        "lift": 373.97
+      },
+      {
+        "athlete": {
+          "name": "Luke Drzewiecki",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 30.68,
+        "engagementRate": 0.4438,
+        "lift": -27.87
+      },
+      {
+        "athlete": {
+          "name": "Luke Haupt",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 21.34,
+        "engagementRate": 0.3648,
+        "lift": 52.88
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 118.51,
+    "avgLift": 260.31,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Melaki Gutierrez",
+          "sport": "FOOTBALL"
+        },
+        "posts": 12,
+        "emv": 27.76,
+        "engagementRate": 0.0333,
+        "lift": null
+      },
+      {
+        "athlete": {
+          "name": "Brian Booker",
+          "sport": "FOOTBALL"
+        },
+        "posts": 12,
+        "emv": 143.02,
+        "engagementRate": 0.377,
+        "lift": null
+      },
+      {
+        "athlete": {
+          "name": "Okiki Olorunfunmi",
+          "sport": "FOOTBALL"
+        },
+        "posts": 11,
+        "emv": 83.86,
+        "engagementRate": 0.2443,
+        "lift": 876.25
+      },
+      {
+        "athlete": {
+          "name": "Max Lantzsch",
+          "sport": "FOOTBALL"
+        },
+        "posts": 11,
+        "emv": 69.08,
+        "engagementRate": 0.0717,
+        "lift": -68.75
+      },
+      {
+        "athlete": {
+          "name": "Austin Brawley",
+          "sport": "FOOTBALL"
+        },
+        "posts": 11,
+        "emv": 268.84,
+        "engagementRate": 0.2913,
+        "lift": -26.57
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 157.58,
+    "avgLift": 83.66,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Luke Drzewiecki",
+          "sport": "FOOTBALL"
+        },
+        "posts": 10,
+        "emv": 128.1,
+        "engagementRate": 0.5403,
+        "lift": -26.28
+      },
+      {
+        "athlete": {
+          "name": "D.J. McKinney",
+          "sport": "FOOTBALL"
+        },
+        "posts": 9,
+        "emv": 134.3,
+        "engagementRate": 0.1525,
+        "lift": -3.7
+      },
+      {
+        "athlete": {
+          "name": "Jaxton Eck",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 318.04,
+        "engagementRate": 0.649,
+        "lift": 306.2
+      },
+      {
+        "athlete": {
+          "name": "Chris Howell",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 7,
+        "emv": 95.08,
+        "engagementRate": 0.2207,
+        "lift": 131.52
+      },
+      {
+        "athlete": {
+          "name": "Tomislav Buljan",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 7,
+        "emv": 112.4,
+        "engagementRate": 0.2654,
+        "lift": 10.56
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 29.64,
+    "avgLift": 178.11,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Ky'Won McCray",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 29.64,
+        "engagementRate": 0.3637,
+        "lift": 178.11
+      }
+    ]
+  }
+}

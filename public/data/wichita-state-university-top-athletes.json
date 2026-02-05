@@ -1,0 +1,200 @@
+{
+  "school": {
+    "_id": "697a72af7ef35a6cd86b951b",
+    "name": "Wichita State University"
+  },
+  "collaboration": {
+    "avgEmv": 45,
+    "avgLift": 72.35,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Josh Parrish",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 6,
+        "emv": 37.1,
+        "engagementRate": 0.2796,
+        "lift": 81.53
+      },
+      {
+        "athlete": {
+          "name": "Jason Parrish",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 6,
+        "emv": 52.54,
+        "engagementRate": 0.3574,
+        "lift": -15.25
+      },
+      {
+        "athlete": {
+          "name": "Noah Hill",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 80.6,
+        "engagementRate": 0.7423,
+        "lift": -16.13
+      },
+      {
+        "athlete": {
+          "name": "Chairo Ogbebor",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 3,
+        "emv": 45.64,
+        "engagementRate": 0.2744,
+        "lift": 6.88
+      },
+      {
+        "athlete": {
+          "name": "Treasure Thompson",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 9.1,
+        "engagementRate": 0.0435,
+        "lift": 304.73
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 103.91,
+    "avgLift": 19.33,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Dre Kindell",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 11,
+        "emv": 171.76,
+        "engagementRate": 0.0576,
+        "lift": 63.2
+      },
+      {
+        "athlete": {
+          "name": "Maddie Wilson",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 11,
+        "emv": 67.56,
+        "engagementRate": 0.3299,
+        "lift": 46.16
+      },
+      {
+        "athlete": {
+          "name": "Jaden Gustafson",
+          "sport": "BASEBALL"
+        },
+        "posts": 9,
+        "emv": 108.36,
+        "engagementRate": 0.2621,
+        "lift": 10.88
+      },
+      {
+        "athlete": {
+          "name": "Chairo Ogbebor",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 9,
+        "emv": 129.04,
+        "engagementRate": 0.2581,
+        "lift": -13.16
+      },
+      {
+        "athlete": {
+          "name": "Rikard Trogen Hedin",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 9,
+        "emv": 42.82,
+        "engagementRate": 0.3902,
+        "lift": -10.42
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 576.9,
+    "avgLift": 2048.94,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Madi Phillips",
+          "sport": "WOMENS_BOWLING"
+        },
+        "posts": 12,
+        "emv": 33.04,
+        "engagementRate": 0.1235,
+        "lift": null
+      },
+      {
+        "athlete": {
+          "name": "Alena McDugle",
+          "sport": "WOMENS_BOWLING"
+        },
+        "posts": 11,
+        "emv": 2677,
+        "engagementRate": 1.7755,
+        "lift": 7551.89
+      },
+      {
+        "athlete": {
+          "name": "Morgan Kline",
+          "sport": "WOMENS_BOWLING"
+        },
+        "posts": 9,
+        "emv": 60.76,
+        "engagementRate": 0.115,
+        "lift": 228.05
+      },
+      {
+        "athlete": {
+          "name": "Kendall Bollea",
+          "sport": "WOMENS_BOWLING"
+        },
+        "posts": 8,
+        "emv": 17.46,
+        "engagementRate": 0.247,
+        "lift": -14.3
+      },
+      {
+        "athlete": {
+          "name": "Jason Parrish",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 8,
+        "emv": 96.22,
+        "engagementRate": 0.4965,
+        "lift": 430.13
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 6.44,
+    "avgLift": -57.11,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Dillon Battie",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 7.3,
+        "engagementRate": 0.0045,
+        "lift": -91.88
+      },
+      {
+        "athlete": {
+          "name": "Aleesha Oden",
+          "sport": "WOMENS_BOWLING"
+        },
+        "posts": 1,
+        "emv": 5.58,
+        "engagementRate": 0.1527,
+        "lift": -22.34
+      }
+    ]
+  }
+}

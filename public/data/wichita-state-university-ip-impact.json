@@ -1,0 +1,68 @@
+{
+  "followers": 347584,
+  "school": {
+    "_id": "697a72af7ef35a6cd86b951b",
+    "name": "Wichita State University"
+  },
+  "overall": {
+    "totalContents": 1740,
+    "totalLikes": 1100743,
+    "totalComments": 48967,
+    "engagementRate": 3.3077184220217273,
+    "emv": 26911.56
+  },
+  "counts": {
+    "hasOrganizationInCaption": 312,
+    "isOrganizationCollaboration": 46,
+    "hasOrganizationLogo": 643,
+    "withIp": 733
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 312,
+      "likes": 209136,
+      "comments": 11029,
+      "engagementRate": 0.633415232001473,
+      "emv": 5285.62
+    },
+    "no": {
+      "contents": 1428,
+      "likes": 891607,
+      "comments": 37938,
+      "engagementRate": 2.6743031900202543
+    },
+    "avgLift": -76.31475614413503
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 46,
+      "likes": 21961,
+      "comments": 808,
+      "engagementRate": 0.06550646750138096,
+      "emv": 520.02
+    },
+    "no": {
+      "contents": 1694,
+      "likes": 1078782,
+      "comments": 48159,
+      "engagementRate": 3.242211954520346
+    },
+    "avgLift": -97.97957479584115
+  },
+  "logo": {
+    "yes": {
+      "contents": 643,
+      "likes": 175475,
+      "comments": 17035,
+      "engagementRate": 0.55385173080464,
+      "emv": 5213
+    },
+    "no": {
+      "contents": 1097,
+      "likes": 925268,
+      "comments": 31932,
+      "engagementRate": 2.753866691217087
+    },
+    "avgLift": -79.88821562891766
+  }
+}

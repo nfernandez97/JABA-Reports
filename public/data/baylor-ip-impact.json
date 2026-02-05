@@ -1,0 +1,68 @@
+{
+  "followers": 2189458,
+  "school": {
+    "_id": "686edb56a020985bba88c489",
+    "name": "Baylor"
+  },
+  "overall": {
+    "totalContents": 6107,
+    "totalLikes": 5377373,
+    "totalComments": 210796,
+    "engagementRate": 2.552307009314634,
+    "emv": 128627.06
+  },
+  "counts": {
+    "hasOrganizationInCaption": 1409,
+    "isOrganizationCollaboration": 189,
+    "hasOrganizationLogo": 1812,
+    "withIp": 2386
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 1409,
+      "likes": 2511910,
+      "comments": 51197,
+      "engagementRate": 1.1706582176958864,
+      "emv": 55357.9
+    },
+    "no": {
+      "contents": 4698,
+      "likes": 2865463,
+      "comments": 159599,
+      "engagementRate": 1.3816487916187477
+    },
+    "avgLift": -15.27092667852758
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 189,
+      "likes": 1056271,
+      "comments": 5323,
+      "engagementRate": 0.4848661175505536,
+      "emv": 21657.72
+    },
+    "no": {
+      "contents": 5918,
+      "likes": 4321102,
+      "comments": 205473,
+      "engagementRate": 2.0674408917640803
+    },
+    "avgLift": -76.54752213318017
+  },
+  "logo": {
+    "yes": {
+      "contents": 1812,
+      "likes": 2561213,
+      "comments": 73942,
+      "engagementRate": 1.203564991883836,
+      "emv": 58618.46
+    },
+    "no": {
+      "contents": 4295,
+      "likes": 2816160,
+      "comments": 136854,
+      "engagementRate": 1.348742017430798
+    },
+    "avgLift": -10.76388395043167
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "followers": 186487,
+  "school": {
+    "_id": "68f2abfea227133e83ce9dd4",
+    "name": "Washington State"
+  },
+  "overall": {
+    "totalContents": 948,
+    "totalLikes": 540083,
+    "totalComments": 37205,
+    "engagementRate": 3.0955937947417245,
+    "emv": 14522.16
+  },
+  "counts": {
+    "hasOrganizationInCaption": 184,
+    "isOrganizationCollaboration": 45,
+    "hasOrganizationLogo": 115,
+    "withIp": 267
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 184,
+      "likes": 165290,
+      "comments": 6815,
+      "engagementRate": 0.9228793427960126,
+      "emv": 3987.3
+    },
+    "no": {
+      "contents": 764,
+      "likes": 374793,
+      "comments": 30390,
+      "engagementRate": 2.172714451945712
+    },
+    "avgLift": -57.52413107163924
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 45,
+      "likes": 64640,
+      "comments": 2564,
+      "engagementRate": 0.36036828304385826,
+      "emv": 1549.2
+    },
+    "no": {
+      "contents": 903,
+      "likes": 475443,
+      "comments": 34641,
+      "engagementRate": 2.7352255116978665
+    },
+    "avgLift": -86.82491511202076
+  },
+  "logo": {
+    "yes": {
+      "contents": 115,
+      "likes": 112479,
+      "comments": 5616,
+      "engagementRate": 0.6332612997152617,
+      "emv": 2811.18
+    },
+    "no": {
+      "contents": 833,
+      "likes": 427604,
+      "comments": 31589,
+      "engagementRate": 2.462332495026463
+    },
+    "avgLift": -74.28205569335769
+  }
+}

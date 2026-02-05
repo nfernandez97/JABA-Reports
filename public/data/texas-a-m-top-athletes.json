@@ -1,0 +1,179 @@
+{
+  "school": {
+    "_id": "68e4810537aba442a4462956",
+    "name": "Texas A&M"
+  },
+  "collaboration": {
+    "avgEmv": 0,
+    "avgLift": null,
+    "top5Athletes": []
+  },
+  "logo": {
+    "avgEmv": 1654.86,
+    "avgLift": 98.49,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Ifenna Cos-Okpalla",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 19,
+        "emv": 2645.74,
+        "engagementRate": 0.2864,
+        "lift": 51.21
+      },
+      {
+        "athlete": {
+          "name": "Rashaun Agee",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 17,
+        "emv": 298.98,
+        "engagementRate": 0.3213,
+        "lift": 22.69
+      },
+      {
+        "athlete": {
+          "name": "KC Concepcion",
+          "sport": "FOOTBALL"
+        },
+        "posts": 17,
+        "emv": 3737.6,
+        "engagementRate": 0.2062,
+        "lift": 120.68
+      },
+      {
+        "athlete": {
+          "name": "Tatum Thomas",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 12,
+        "emv": 934.34,
+        "engagementRate": 0.6991,
+        "lift": 199.39
+      },
+      {
+        "athlete": {
+          "name": "Justin Lamkin",
+          "sport": "BASEBALL"
+        },
+        "posts": 12,
+        "emv": 657.66,
+        "engagementRate": 0.4635,
+        "lift": null
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 1465.45,
+    "avgLift": 137.8,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Ifenna Cos-Okpalla",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 39,
+        "emv": 3370.2,
+        "engagementRate": 0.1782,
+        "lift": -53.06
+      },
+      {
+        "athlete": {
+          "name": "Rashaun Agee",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 18,
+        "emv": 454.66,
+        "engagementRate": 0.4592,
+        "lift": 308.54
+      },
+      {
+        "athlete": {
+          "name": "Mario Craver",
+          "sport": "FOOTBALL"
+        },
+        "posts": 18,
+        "emv": 2118.08,
+        "engagementRate": 0.1233,
+        "lift": -33.79
+      },
+      {
+        "athlete": {
+          "name": "Ava Underwood",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 16,
+        "emv": 895.24,
+        "engagementRate": 0.1616,
+        "lift": 214.74
+      },
+      {
+        "athlete": {
+          "name": "Maddie Waak",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 12,
+        "emv": 489.06,
+        "engagementRate": 0.6631,
+        "lift": 252.59
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 494.65,
+    "avgLift": -38.22,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Rueben Owens II",
+          "sport": "FOOTBALL"
+        },
+        "posts": 9,
+        "emv": 484.68,
+        "engagementRate": 0.0945,
+        "lift": -47.8
+      },
+      {
+        "athlete": {
+          "name": "Mario Craver",
+          "sport": "FOOTBALL"
+        },
+        "posts": 7,
+        "emv": 570.88,
+        "engagementRate": 0.0851,
+        "lift": -49.93
+      },
+      {
+        "athlete": {
+          "name": "Scarlett Schremmer",
+          "sport": "WOMENS_GOLF"
+        },
+        "posts": 7,
+        "emv": 344.6,
+        "engagementRate": 0.1767,
+        "lift": 43.29
+      },
+      {
+        "athlete": {
+          "name": "Marcel Reed",
+          "sport": "FOOTBALL"
+        },
+        "posts": 7,
+        "emv": 788.36,
+        "engagementRate": 0.0463,
+        "lift": -63.46
+      },
+      {
+        "athlete": {
+          "name": "Jace LaViolette",
+          "sport": "BASEBALL"
+        },
+        "posts": 6,
+        "emv": 284.74,
+        "engagementRate": 0.0778,
+        "lift": -73.22
+      }
+    ]
+  }
+}

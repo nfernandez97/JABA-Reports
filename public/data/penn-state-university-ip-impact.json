@@ -1,0 +1,68 @@
+{
+  "followers": 4032162,
+  "school": {
+    "_id": "68eea2a92dc59d1b8e6f9ea9",
+    "name": "Penn State University"
+  },
+  "overall": {
+    "totalContents": 7202,
+    "totalLikes": 12014094,
+    "totalComments": 280324,
+    "engagementRate": 3.0490883054797897,
+    "emv": 268314.28
+  },
+  "counts": {
+    "hasOrganizationInCaption": 1356,
+    "isOrganizationCollaboration": 1,
+    "hasOrganizationLogo": 548,
+    "withIp": 1686
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 1356,
+      "likes": 3006326,
+      "comments": 63378,
+      "engagementRate": 0.7613047293238714,
+      "emv": 66464.32
+    },
+    "no": {
+      "contents": 5846,
+      "likes": 9007768,
+      "comments": 216946,
+      "engagementRate": 2.287783576155918
+    },
+    "avgLift": -66.7230442049477
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 1,
+      "likes": 8141,
+      "comments": 36,
+      "engagementRate": 0.0020279443137453308,
+      "emv": 166.42
+    },
+    "no": {
+      "contents": 7201,
+      "likes": 12005953,
+      "comments": 280288,
+      "engagementRate": 3.0470603611660443
+    },
+    "avgLift": -99.93344587657037
+  },
+  "logo": {
+    "yes": {
+      "contents": 548,
+      "likes": 999552,
+      "comments": 23474,
+      "engagementRate": 0.2537164925417183,
+      "emv": 22338.44
+    },
+    "no": {
+      "contents": 6654,
+      "likes": 11014542,
+      "comments": 256850,
+      "engagementRate": 2.7953718129380714
+    },
+    "avgLift": -90.92369425178363
+  }
+}

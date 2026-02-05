@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { ArrowLeft, Award } from 'lucide-react';
+import { ArrowLeft, Award, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { PlayflyIPReport } from './PlayflyIPReport';
+import { PlayflyIPPage } from './PlayflyIPPage';
 import { isReportEnabled } from '../config/reports';
 
-type View = 'hub' | 'ip-report';
+type View = 'hub' | 'ip-report' | 'ip-page';
 
 interface PlayflyReportHubProps {
   onBack: () => void;
@@ -16,6 +17,11 @@ export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
   // IP Report view
   if (activeView === 'ip-report') {
     return <PlayflyIPReport onBack={() => setActiveView('hub')} />;
+  }
+
+  // IP Page view
+  if (activeView === 'ip-page') {
+    return <PlayflyIPPage onBack={() => setActiveView('hub')} />;
   }
 
   // Hub view - Clean minimal design
@@ -129,6 +135,41 @@ export function PlayflyReportHub({ onBack }: PlayflyReportHubProps) {
                 {/* View button */}
                 <div className="flex items-center gap-2 text-yellow-400 text-sm font-semibold">
                   <span>View Report</span>
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </motion.button>
+          )}
+
+          {/* Card 3: IP Page */}
+          {isReportEnabled('ip-page') && (
+            <motion.button
+              onClick={() => setActiveView('ip-page')}
+              className="group relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:border-green-400/50 transition-all duration-300 text-left w-full lg:col-span-2"
+              whileHover={{ scale: 1.02, y: -5 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <div className="relative z-10">
+                {/* Icon */}
+                <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-[#1770C0] rounded-xl flex items-center justify-center mb-4">
+                  <Trophy className="w-7 h-7 text-white" />
+                </div>
+
+                {/* Title */}
+                <h2 className="text-2xl font-bold text-white mb-3">
+                  IP Page
+                </h2>
+
+                {/* One-line description */}
+                <p className="text-gray-300 text-base mb-6">
+                  New IP analysis and performance insights
+                </p>
+
+                {/* View button */}
+                <div className="flex items-center gap-2 text-green-400 text-sm font-semibold">
+                  <span>View Page</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

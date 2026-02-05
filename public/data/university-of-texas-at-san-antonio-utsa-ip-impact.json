@@ -1,0 +1,68 @@
+{
+  "followers": 832689,
+  "school": {
+    "_id": "68f290a8a227133e83ce9dbf",
+    "name": "University of Texas at San Antonio (UTSA)"
+  },
+  "overall": {
+    "totalContents": 3339,
+    "totalLikes": 1372227,
+    "totalComments": 102021,
+    "engagementRate": 1.7704665247169111,
+    "emv": 37646.64
+  },
+  "counts": {
+    "hasOrganizationInCaption": 639,
+    "isOrganizationCollaboration": 318,
+    "hasOrganizationLogo": 996,
+    "withIp": 1318
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 639,
+      "likes": 322012,
+      "comments": 12147,
+      "engagementRate": 0.40130108599969494,
+      "emv": 7654.94
+    },
+    "no": {
+      "contents": 2700,
+      "likes": 1050215,
+      "comments": 89874,
+      "engagementRate": 1.369165438717216
+    },
+    "avgLift": -70.69009524695002
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 318,
+      "likes": 199226,
+      "comments": 3218,
+      "engagementRate": 0.2431207809878598,
+      "emv": 4306.32
+    },
+    "no": {
+      "contents": 3021,
+      "likes": 1173001,
+      "comments": 98803,
+      "engagementRate": 1.5273457437290514
+    },
+    "avgLift": -84.08213844271603
+  },
+  "logo": {
+    "yes": {
+      "contents": 996,
+      "likes": 427597,
+      "comments": 33509,
+      "engagementRate": 0.553755363647172,
+      "emv": 11902.84
+    },
+    "no": {
+      "contents": 2343,
+      "likes": 944630,
+      "comments": 68512,
+      "engagementRate": 1.2167111610697392
+    },
+    "avgLift": -54.48752494714463
+  }
+}

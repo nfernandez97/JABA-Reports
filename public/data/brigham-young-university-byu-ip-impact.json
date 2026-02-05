@@ -1,0 +1,68 @@
+{
+  "followers": 2693744,
+  "school": {
+    "_id": "690067f5f719b77ba3f09235",
+    "name": "Brigham Young University(BYU)"
+  },
+  "overall": {
+    "totalContents": 5050,
+    "totalLikes": 7155702,
+    "totalComments": 184052,
+    "engagementRate": 2.724740732601168,
+    "emv": 161519.24
+  },
+  "counts": {
+    "hasOrganizationInCaption": 758,
+    "isOrganizationCollaboration": 170,
+    "hasOrganizationLogo": 892,
+    "withIp": 1487
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 758,
+      "likes": 934449,
+      "comments": 29980,
+      "engagementRate": 0.35802548423309716,
+      "emv": 21686.98
+    },
+    "no": {
+      "contents": 4292,
+      "likes": 6221253,
+      "comments": 154072,
+      "engagementRate": 2.3667152483680707
+    },
+    "avgLift": -84.87247316803457
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 170,
+      "likes": 623060,
+      "comments": 10339,
+      "engagementRate": 0.23513704346070005,
+      "emv": 13495.1
+    },
+    "no": {
+      "contents": 4880,
+      "likes": 6532642,
+      "comments": 173713,
+      "engagementRate": 2.4896036891404676
+    },
+    "avgLift": -90.55524200553057
+  },
+  "logo": {
+    "yes": {
+      "contents": 892,
+      "likes": 1312902,
+      "comments": 34607,
+      "engagementRate": 0.5002364738445821,
+      "emv": 29718.74
+    },
+    "no": {
+      "contents": 4158,
+      "likes": 5842800,
+      "comments": 149445,
+      "engagementRate": 2.2245042587565855
+    },
+    "avgLift": -77.51245151024365
+  }
+}

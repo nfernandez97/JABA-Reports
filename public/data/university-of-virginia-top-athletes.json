@@ -1,0 +1,230 @@
+{
+  "school": {
+    "_id": "68f0d50ea227133e83ce965a",
+    "name": "University of Virginia"
+  },
+  "collaboration": {
+    "avgEmv": 109.32,
+    "avgLift": 248.65,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Paul Chang",
+          "sport": "MENS_GOLF"
+        },
+        "posts": 5,
+        "emv": 58.56,
+        "engagementRate": 0.6006,
+        "lift": 78.5
+      },
+      {
+        "athlete": {
+          "name": "Brendan Millon",
+          "sport": "MENS_LACROSSE"
+        },
+        "posts": 3,
+        "emv": 278.4,
+        "engagementRate": 0.1638,
+        "lift": -2.33
+      },
+      {
+        "athlete": {
+          "name": "Martina Genis Salas",
+          "sport": "WOMENS_TENNIS"
+        },
+        "posts": 3,
+        "emv": 54.38,
+        "engagementRate": 0.3171,
+        "lift": 74.75
+      },
+      {
+        "athlete": {
+          "name": "Laney Rouse",
+          "sport": "WOMENS_SOCCER"
+        },
+        "posts": 3,
+        "emv": 134.64,
+        "engagementRate": 0.9497,
+        "lift": 1135.85
+      },
+      {
+        "athlete": {
+          "name": "Gable Porter",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 2,
+        "emv": 20.64,
+        "engagementRate": 0.1301,
+        "lift": -43.54
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 269.88,
+    "avgLift": 8.62,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Harrison Didawick",
+          "sport": "BASEBALL"
+        },
+        "posts": 12,
+        "emv": 422.1,
+        "engagementRate": 0.543,
+        "lift": null
+      },
+      {
+        "athlete": {
+          "name": "Kevin Jaxel",
+          "sport": "BASEBALL"
+        },
+        "posts": 12,
+        "emv": 222.74,
+        "engagementRate": 0.26,
+        "lift": null
+      },
+      {
+        "athlete": {
+          "name": "Antonio Perrotta",
+          "sport": "BASEBALL"
+        },
+        "posts": 11,
+        "emv": 129.1,
+        "engagementRate": 0.1761,
+        "lift": -18.83
+      },
+      {
+        "athlete": {
+          "name": "J'Mari Taylor",
+          "sport": "FOOTBALL"
+        },
+        "posts": 11,
+        "emv": 443.12,
+        "engagementRate": 0.4948,
+        "lift": 59.45
+      },
+      {
+        "athlete": {
+          "name": "Eric Becker",
+          "sport": "BASEBALL"
+        },
+        "posts": 10,
+        "emv": 132.36,
+        "engagementRate": 0.1513,
+        "lift": -14.77
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 185.77,
+    "avgLift": 211.49,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Devin Tillis",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 15,
+        "emv": 88.26,
+        "engagementRate": 0.1136,
+        "lift": 905.74
+      },
+      {
+        "athlete": {
+          "name": "Kam Robinson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 13,
+        "emv": 489.5,
+        "engagementRate": 0.2701,
+        "lift": -54.34
+      },
+      {
+        "athlete": {
+          "name": "Keyandre Davis",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 13,
+        "emv": 125.22,
+        "engagementRate": 0.1646,
+        "lift": 43.16
+      },
+      {
+        "athlete": {
+          "name": "Jeremiah Nubbe",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 12,
+        "emv": 106.24,
+        "engagementRate": 0.1324,
+        "lift": 80.97
+      },
+      {
+        "athlete": {
+          "name": "Will Anthony",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 11,
+        "emv": 119.62,
+        "engagementRate": 0.4451,
+        "lift": 81.92
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 165.04,
+    "avgLift": -53.4,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Gary Martin",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 8,
+        "emv": 384.48,
+        "engagementRate": 0.1555,
+        "lift": -24.4
+      },
+      {
+        "athlete": {
+          "name": "Chandler Morris",
+          "sport": "FOOTBALL"
+        },
+        "posts": 7,
+        "emv": 325.32,
+        "engagementRate": 0.0913,
+        "lift": -26.84
+      },
+      {
+        "athlete": {
+          "name": "Grace Smith",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 6,
+        "emv": 11.9,
+        "engagementRate": 0.104,
+        "lift": -62.41
+      },
+      {
+        "athlete": {
+          "name": "Lana Pudar",
+          "sport": "SWIMMING_AND_DIVING"
+        },
+        "posts": 6,
+        "emv": 94.4,
+        "engagementRate": 0.017,
+        "lift": -70.57
+      },
+      {
+        "athlete": {
+          "name": "Ma'Khi Falkquay",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 5,
+        "emv": 9.12,
+        "engagementRate": 0.0073,
+        "lift": -82.8
+      }
+    ]
+  }
+}

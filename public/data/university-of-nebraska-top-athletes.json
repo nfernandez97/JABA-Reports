@@ -1,0 +1,179 @@
+{
+  "school": {
+    "_id": "68d2414d6f71af5707a79f2a",
+    "name": "University of Nebraska"
+  },
+  "collaboration": {
+    "avgEmv": 0,
+    "avgLift": null,
+    "top5Athletes": []
+  },
+  "logo": {
+    "avgEmv": 983.47,
+    "avgLift": 208.78,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Emmett Johnson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 22,
+        "emv": 2631.82,
+        "engagementRate": 0.132,
+        "lift": -5.61
+      },
+      {
+        "athlete": {
+          "name": "Callin Hake",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 19,
+        "emv": 170.52,
+        "engagementRate": 0.0465,
+        "lift": 457.99
+      },
+      {
+        "athlete": {
+          "name": "Mekhi Nelson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 17,
+        "emv": 334.38,
+        "engagementRate": 0.1131,
+        "lift": 247.35
+      },
+      {
+        "athlete": {
+          "name": "Sam Hoiberg",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 16,
+        "emv": 821.64,
+        "engagementRate": 0.2207,
+        "lift": 124.53
+      },
+      {
+        "athlete": {
+          "name": "Nyziah Hunter",
+          "sport": "FOOTBALL"
+        },
+        "posts": 16,
+        "emv": 958.98,
+        "engagementRate": 0.1883,
+        "lift": 219.65
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 544.78,
+    "avgLift": 695.61,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Andrew Marshall",
+          "sport": "FOOTBALL"
+        },
+        "posts": 18,
+        "emv": 40.78,
+        "engagementRate": 0.359,
+        "lift": 54.46
+      },
+      {
+        "athlete": {
+          "name": "Ryan Hunter",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 9,
+        "emv": 1555.62,
+        "engagementRate": 0.202,
+        "lift": 83.31
+      },
+      {
+        "athlete": {
+          "name": "Vincent Genatone",
+          "sport": "FOOTBALL"
+        },
+        "posts": 9,
+        "emv": 105.1,
+        "engagementRate": 0.2221,
+        "lift": 3337.87
+      },
+      {
+        "athlete": {
+          "name": "Merideth Brandt",
+          "sport": "WOMENS_GYMNASTICS"
+        },
+        "posts": 9,
+        "emv": 32.6,
+        "engagementRate": 0.1362,
+        "lift": -2.06
+      },
+      {
+        "athlete": {
+          "name": "Emmett Johnson",
+          "sport": "FOOTBALL"
+        },
+        "posts": 8,
+        "emv": 989.82,
+        "engagementRate": 0.1395,
+        "lift": 4.47
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 555.28,
+    "avgLift": -82.56,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Olivia Mauch",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 15,
+        "emv": 365.56,
+        "engagementRate": 0.0199,
+        "lift": -92.56
+      },
+      {
+        "athlete": {
+          "name": "Alex Nitache",
+          "sport": "MENS_GYMNASTICS"
+        },
+        "posts": 9,
+        "emv": 30.84,
+        "engagementRate": 0.0283,
+        "lift": -88.57
+      },
+      {
+        "athlete": {
+          "name": "Ryan Hunter",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 9,
+        "emv": 138.04,
+        "engagementRate": 0.0179,
+        "lift": -93.93
+      },
+      {
+        "athlete": {
+          "name": "Britt Prince",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 8,
+        "emv": 178.6,
+        "engagementRate": 0.0724,
+        "lift": -76.04
+      },
+      {
+        "athlete": {
+          "name": "Andi Jackson",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 8,
+        "emv": 2063.34,
+        "engagementRate": 0.0728,
+        "lift": -61.7
+      }
+    ]
+  }
+}

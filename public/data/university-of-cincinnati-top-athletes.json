@@ -1,0 +1,230 @@
+{
+  "school": {
+    "_id": "68f876c47804265f86eb36fb",
+    "name": "University of Cincinnati"
+  },
+  "collaboration": {
+    "avgEmv": 34.52,
+    "avgLift": 32.84,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Sydney Nolan",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 3,
+        "emv": 25.1,
+        "engagementRate": 0.1087,
+        "lift": 67.9
+      },
+      {
+        "athlete": {
+          "name": "Mya Perry",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 3,
+        "emv": 123.62,
+        "engagementRate": 0.1874,
+        "lift": 99.56
+      },
+      {
+        "athlete": {
+          "name": "Caliyah DeVillasee",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 13.2,
+        "engagementRate": 0.0969,
+        "lift": -67.87
+      },
+      {
+        "athlete": {
+          "name": "Delaney Snyder",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 2,
+        "emv": 8.76,
+        "engagementRate": 0.0613,
+        "lift": 145.26
+      },
+      {
+        "athlete": {
+          "name": "Destiny Thomas",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 1,
+        "emv": 1.9,
+        "engagementRate": 0.0202,
+        "lift": -80.66
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 201.78,
+    "avgLift": -58.58,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Juliette Laracuente-Huebner",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 14,
+        "emv": 66.98,
+        "engagementRate": 0.0126,
+        "lift": -95.52
+      },
+      {
+        "athlete": {
+          "name": "Caliyah DeVillasee",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 13,
+        "emv": 132.64,
+        "engagementRate": 0.1377,
+        "lift": -69.04
+      },
+      {
+        "athlete": {
+          "name": "Cyrus Allen",
+          "sport": "FOOTBALL"
+        },
+        "posts": 12,
+        "emv": 482.42,
+        "engagementRate": 0.1411,
+        "lift": -83.6
+      },
+      {
+        "athlete": {
+          "name": "Mya Perry",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 11,
+        "emv": 198.88,
+        "engagementRate": 0.0793,
+        "lift": -36.83
+      },
+      {
+        "athlete": {
+          "name": "Brenden Garula",
+          "sport": "BASEBALL"
+        },
+        "posts": 9,
+        "emv": 128,
+        "engagementRate": 0.3815,
+        "lift": -7.89
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 375.54,
+    "avgLift": 260.3,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Juliette Laracuente-Huebner",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 16,
+        "emv": 117.76,
+        "engagementRate": 0.0258,
+        "lift": -91.51
+      },
+      {
+        "athlete": {
+          "name": "Charlie Niehaus",
+          "sport": "BASEBALL"
+        },
+        "posts": 12,
+        "emv": 358.4,
+        "engagementRate": 0.6734,
+        "lift": 104.51
+      },
+      {
+        "athlete": {
+          "name": "Carly Glendinning",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 12,
+        "emv": 124.3,
+        "engagementRate": 0.165,
+        "lift": -29.81
+      },
+      {
+        "athlete": {
+          "name": "Robert Hart",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 12,
+        "emv": 1119.02,
+        "engagementRate": 0.6292,
+        "lift": 1314.74
+      },
+      {
+        "athlete": {
+          "name": "Lauden Brooks",
+          "sport": "BASEBALL"
+        },
+        "posts": 11,
+        "emv": 158.2,
+        "engagementRate": 0.2051,
+        "lift": 3.59
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 25.66,
+    "avgLift": -60.71,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Evan Tengesdahl",
+          "sport": "FOOTBALL"
+        },
+        "posts": 10,
+        "emv": 13.72,
+        "engagementRate": 0.0033,
+        "lift": -95.41
+      },
+      {
+        "athlete": {
+          "name": "Janelle Green",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 6,
+        "emv": 52.78,
+        "engagementRate": 0.0331,
+        "lift": -64.94
+      },
+      {
+        "athlete": {
+          "name": "Cam Roetherford",
+          "sport": "FOOTBALL"
+        },
+        "posts": 6,
+        "emv": 9.8,
+        "engagementRate": 0.0567,
+        "lift": -62.38
+      },
+      {
+        "athlete": {
+          "name": "Oliver Mayer",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 5,
+        "emv": 22.26,
+        "engagementRate": 0.1319,
+        "lift": -45.83
+      },
+      {
+        "athlete": {
+          "name": "Quinn Staten",
+          "sport": "FOOTBALL"
+        },
+        "posts": 4,
+        "emv": 29.74,
+        "engagementRate": 0.2533,
+        "lift": -35.01
+      }
+    ]
+  }
+}

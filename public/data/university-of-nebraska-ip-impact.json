@@ -1,0 +1,68 @@
+{
+  "followers": 3012749,
+  "school": {
+    "_id": "68d2414d6f71af5707a79f2a",
+    "name": "University of Nebraska"
+  },
+  "overall": {
+    "totalContents": 3049,
+    "totalLikes": 10695423,
+    "totalComments": 122810,
+    "engagementRate": 3.5908178875837318,
+    "emv": 226189.46
+  },
+  "counts": {
+    "hasOrganizationInCaption": 617,
+    "isOrganizationCollaboration": 0,
+    "hasOrganizationLogo": 1498,
+    "withIp": 1658
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 617,
+      "likes": 2992956,
+      "comments": 25487,
+      "engagementRate": 1.0018899682648637,
+      "emv": 62407.82
+    },
+    "no": {
+      "contents": 2432,
+      "likes": 7702467,
+      "comments": 97323,
+      "engagementRate": 2.588927919318868
+    },
+    "avgLift": -61.30097092357616
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 0,
+      "likes": 0,
+      "comments": 0,
+      "engagementRate": 0,
+      "emv": 0
+    },
+    "no": {
+      "contents": 3049,
+      "likes": 10695423,
+      "comments": 122810,
+      "engagementRate": 3.5908178875837318
+    },
+    "avgLift": -100
+  },
+  "logo": {
+    "yes": {
+      "contents": 1498,
+      "likes": 6141816,
+      "comments": 62908,
+      "engagementRate": 2.059489190768962,
+      "emv": 129127.12
+    },
+    "no": {
+      "contents": 1551,
+      "likes": 4553607,
+      "comments": 59902,
+      "engagementRate": 1.5313286968147695
+    },
+    "avgLift": 34.49034129986524
+  }
+}

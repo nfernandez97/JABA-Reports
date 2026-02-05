@@ -1,0 +1,230 @@
+{
+  "school": {
+    "_id": "68f290a8a227133e83ce9dbf",
+    "name": "University of Texas at San Antonio (UTSA)"
+  },
+  "collaboration": {
+    "avgEmv": 48.83,
+    "avgLift": 55.96,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Conor Myles",
+          "sport": "BASEBALL"
+        },
+        "posts": 10,
+        "emv": 82.1,
+        "engagementRate": 0.4356,
+        "lift": 61.48
+      },
+      {
+        "athlete": {
+          "name": "Cheyenne Rowe",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 9,
+        "emv": 44.2,
+        "engagementRate": 0.2319,
+        "lift": 25.63
+      },
+      {
+        "athlete": {
+          "name": "Adriana Robles",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 9,
+        "emv": 42.02,
+        "engagementRate": 0.2091,
+        "lift": -45.1
+      },
+      {
+        "athlete": {
+          "name": "Miranda Putnicki",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 8,
+        "emv": 28.26,
+        "engagementRate": 0.114,
+        "lift": 208.04
+      },
+      {
+        "athlete": {
+          "name": "Jamir Simpson",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 8,
+        "emv": 47.56,
+        "engagementRate": 0.1047,
+        "lift": 29.77
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 356.28,
+    "avgLift": 93.14,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Shad Banks Jr.",
+          "sport": "FOOTBALL"
+        },
+        "posts": 19,
+        "emv": 594.54,
+        "engagementRate": 0.1457,
+        "lift": -20.69
+      },
+      {
+        "athlete": {
+          "name": "Robert Henry Jr.",
+          "sport": "FOOTBALL"
+        },
+        "posts": 11,
+        "emv": 175.48,
+        "engagementRate": 0.3324,
+        "lift": 268.53
+      },
+      {
+        "athlete": {
+          "name": "Owen McCown",
+          "sport": "FOOTBALL"
+        },
+        "posts": 10,
+        "emv": 205.54,
+        "engagementRate": 0.1084,
+        "lift": -46.79
+      },
+      {
+        "athlete": {
+          "name": "Devin McCuin",
+          "sport": "FOOTBALL"
+        },
+        "posts": 10,
+        "emv": 726.16,
+        "engagementRate": 0.637,
+        "lift": 275.18
+      },
+      {
+        "athlete": {
+          "name": "Ezekiel Saldana",
+          "sport": "FOOTBALL"
+        },
+        "posts": 10,
+        "emv": 79.66,
+        "engagementRate": 0.3237,
+        "lift": -10.55
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 200.63,
+    "avgLift": 76.7,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Jasmine Kessler",
+          "sport": "WOMENS_SOCCER"
+        },
+        "posts": 21,
+        "emv": 147.08,
+        "engagementRate": 0.8938,
+        "lift": 286.42
+      },
+      {
+        "athlete": {
+          "name": "Ally Tribe",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 13,
+        "emv": 72.64,
+        "engagementRate": 0.0967,
+        "lift": -36.07
+      },
+      {
+        "athlete": {
+          "name": "Shad Banks Jr.",
+          "sport": "FOOTBALL"
+        },
+        "posts": 13,
+        "emv": 622.9,
+        "engagementRate": 0.239,
+        "lift": 97.37
+      },
+      {
+        "athlete": {
+          "name": "Jamir Simpson",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 13,
+        "emv": 88.08,
+        "engagementRate": 0.1095,
+        "lift": 64.36
+      },
+      {
+        "athlete": {
+          "name": "Adriana Robles",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 11,
+        "emv": 72.44,
+        "engagementRate": 0.2572,
+        "lift": -28.6
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 36.35,
+    "avgLift": -36.28,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Bella Bickham",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 12,
+        "emv": 19.74,
+        "engagementRate": 0.008,
+        "lift": -77.67
+      },
+      {
+        "athlete": {
+          "name": "Diego Ramirez",
+          "sport": "MENS_CROSS_COUNTRY"
+        },
+        "posts": 6,
+        "emv": 35.44,
+        "engagementRate": 0.1272,
+        "lift": -56.78
+      },
+      {
+        "athlete": {
+          "name": "Stanley Borden",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 5,
+        "emv": 67.96,
+        "engagementRate": 0.1087,
+        "lift": -59.35
+      },
+      {
+        "athlete": {
+          "name": "O.J. Ruiz",
+          "sport": "MENS_CROSS_COUNTRY"
+        },
+        "posts": 5,
+        "emv": 3,
+        "engagementRate": 0.0043,
+        "lift": -93.16
+      },
+      {
+        "athlete": {
+          "name": "Charlie Staddon",
+          "sport": "MENS_TRACK_AND_FIELD"
+        },
+        "posts": 5,
+        "emv": 55.6,
+        "engagementRate": 0.2974,
+        "lift": 105.58
+      }
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "school": {
+    "_id": "697c00f4a3ae1605b1d014e8",
+    "name": "Virginia Tech"
+  },
+  "collaboration": {
+    "avgEmv": 42.52,
+    "avgLift": 76.32,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Ethen Miller",
+          "sport": "MENS_WRESTLING"
+        },
+        "posts": 2,
+        "emv": 68.84,
+        "engagementRate": null,
+        "lift": 117.81
+      },
+      {
+        "athlete": {
+          "name": "Sivan Auerbach",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 2,
+        "emv": 16.2,
+        "engagementRate": 0.1126,
+        "lift": 34.83
+      }
+    ]
+  },
+  "logo": {
+    "avgEmv": 250.47,
+    "avgLift": 2472.21,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Kody Huisman",
+          "sport": "FOOTBALL"
+        },
+        "posts": 13,
+        "emv": 278.14,
+        "engagementRate": 0.6585,
+        "lift": 155.25
+      },
+      {
+        "athlete": {
+          "name": "Isaiah Cash",
+          "sport": "FOOTBALL"
+        },
+        "posts": 12,
+        "emv": 188.6,
+        "engagementRate": 0.3367,
+        "lift": 9530.95
+      },
+      {
+        "athlete": {
+          "name": "Mackenzie Nelson",
+          "sport": "WOMENS_BASKETBALL"
+        },
+        "posts": 12,
+        "emv": 329.26,
+        "engagementRate": 0.4031,
+        "lift": null
+      },
+      {
+        "athlete": {
+          "name": "Noah Chambers",
+          "sport": "FOOTBALL"
+        },
+        "posts": 12,
+        "emv": 303.6,
+        "engagementRate": 0.3402,
+        "lift": -35.22
+      },
+      {
+        "athlete": {
+          "name": "Andy Sullins",
+          "sport": "MENS_SOCCER"
+        },
+        "posts": 11,
+        "emv": 152.74,
+        "engagementRate": 0.2307,
+        "lift": 237.85
+      }
+    ]
+  },
+  "mention (in caption)": {
+    "avgEmv": 150.16,
+    "avgLift": -16.07,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Katrin Brzyszkowska",
+          "sport": "WOMENS_TRACK_AND_FIELD"
+        },
+        "posts": 10,
+        "emv": 47.44,
+        "engagementRate": 0.2121,
+        "lift": 1.23
+      },
+      {
+        "athlete": {
+          "name": "Anderson French",
+          "sport": "BASEBALL"
+        },
+        "posts": 8,
+        "emv": 154.12,
+        "engagementRate": 0.2244,
+        "lift": -35.31
+      },
+      {
+        "athlete": {
+          "name": "Ivy Cooper",
+          "sport": "WOMENS_VOLLEYBALL"
+        },
+        "posts": 8,
+        "emv": 46.82,
+        "engagementRate": 0.2914,
+        "lift": -5.47
+      },
+      {
+        "athlete": {
+          "name": "Anna Weir",
+          "sport": "WOMENS_SOCCER"
+        },
+        "posts": 7,
+        "emv": 76.64,
+        "engagementRate": 0.2147,
+        "lift": -9.15
+      },
+      {
+        "athlete": {
+          "name": "Jaden Schutt",
+          "sport": "MENS_BASKETBALL"
+        },
+        "posts": 7,
+        "emv": 425.78,
+        "engagementRate": 0.1342,
+        "lift": -31.67
+      }
+    ]
+  },
+  "partnership": {
+    "avgEmv": 33.84,
+    "avgLift": -27.05,
+    "top5Athletes": [
+      {
+        "athlete": {
+          "name": "Tucker Holloway",
+          "sport": "FOOTBALL"
+        },
+        "posts": 3,
+        "emv": 28.24,
+        "engagementRate": 0.0389,
+        "lift": -98.03
+      },
+      {
+        "athlete": {
+          "name": "Kyle Lowe",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 67.04,
+        "engagementRate": 0.782,
+        "lift": 110.16
+      },
+      {
+        "athlete": {
+          "name": "Christian Ellis",
+          "sport": "FOOTBALL"
+        },
+        "posts": 2,
+        "emv": 61.2,
+        "engagementRate": 0.4114,
+        "lift": -20.82
+      },
+      {
+        "athlete": {
+          "name": "Ilyas Fahim",
+          "sport": "MENS_TENNIS"
+        },
+        "posts": 2,
+        "emv": 8.28,
+        "engagementRate": 0.0845,
+        "lift": -58.73
+      },
+      {
+        "athlete": {
+          "name": "Lucas Austin",
+          "sport": "FOOTBALL"
+        },
+        "posts": 1,
+        "emv": 4.44,
+        "engagementRate": 0.1325,
+        "lift": -67.83
+      }
+    ]
+  }
+}

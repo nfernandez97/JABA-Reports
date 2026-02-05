@@ -1,0 +1,68 @@
+{
+  "followers": 2274859,
+  "school": {
+    "_id": "68ae4b4073bfe6b9db3b4862",
+    "name": "Auburn University"
+  },
+  "overall": {
+    "totalContents": 5314,
+    "totalLikes": 7399088,
+    "totalComments": 236483,
+    "engagementRate": 3.356502974470066,
+    "emv": 171630.06
+  },
+  "counts": {
+    "hasOrganizationInCaption": 1377,
+    "isOrganizationCollaboration": 21,
+    "hasOrganizationLogo": 654,
+    "withIp": 1795
+  },
+  "orgInCaption": {
+    "yes": {
+      "contents": 1377,
+      "likes": 2597683,
+      "comments": 56865,
+      "engagementRate": 1.1669066082776998,
+      "emv": 57640.16
+    },
+    "no": {
+      "contents": 3937,
+      "likes": 4801405,
+      "comments": 179618,
+      "engagementRate": 2.189596366192366
+    },
+    "avgLift": -46.70677087819109
+  },
+  "collaboration": {
+    "yes": {
+      "contents": 21,
+      "likes": 169554,
+      "comments": 1406,
+      "engagementRate": 0.07515191051401428,
+      "emv": 3531.68
+    },
+    "no": {
+      "contents": 5293,
+      "likes": 7229534,
+      "comments": 235077,
+      "engagementRate": 3.281351063956052
+    },
+    "avgLift": -97.70972660196225
+  },
+  "logo": {
+    "yes": {
+      "contents": 654,
+      "likes": 1588044,
+      "comments": 33727,
+      "engagementRate": 0.7129105584126313,
+      "emv": 35133.58
+    },
+    "no": {
+      "contents": 4660,
+      "likes": 5811044,
+      "comments": 202756,
+      "engagementRate": 2.6435924160574347
+    },
+    "avgLift": -73.03250856363697
+  }
+}
