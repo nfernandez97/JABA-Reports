@@ -844,7 +844,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div>
                       <div className="text-sm text-white/60 mb-1">EMV Generated</div>
                       <div className="text-2xl font-bold text-green-400">
-                        {formatEMV(filteredSchools.reduce((sum, s) => sum + s.logo.yes.emv, 0))}
+                        {formatEMV(filteredSchools.reduce((sum, s) => sum + (s.logo.yes.emv * s.logo.yes.contents), 0))}
                       </div>
                     </div>
 
@@ -894,7 +894,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div>
                       <div className="text-sm text-white/60 mb-1">EMV Generated</div>
                       <div className="text-2xl font-bold text-yellow-400">
-                        {formatEMV(filteredSchools.reduce((sum, s) => sum + s.orgInCaption.yes.emv, 0))}
+                        {formatEMV(filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.yes.emv * s.orgInCaption.yes.contents), 0))}
                       </div>
                     </div>
 
@@ -946,7 +946,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div>
                       <div className="text-sm text-white/60 mb-1">EMV Generated</div>
                       <div className="text-2xl font-bold text-purple-400">
-                        {formatEMV(filteredSchools.reduce((sum, s) => sum + s.collaboration.yes.emv, 0))}
+                        {formatEMV(filteredSchools.reduce((sum, s) => sum + (s.collaboration.yes.emv * s.collaboration.yes.contents), 0))}
                       </div>
                     </div>
 
@@ -1237,14 +1237,14 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               const totals = {
                 withIP: {
                   contents: filteredSchools.reduce((sum, s) => sum + s.logo.yes.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + s.logo.yes.likes, 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + s.logo.yes.comments, 0),
-                  emv: filteredSchools.reduce((sum, s) => sum + s.logo.yes.emv, 0),
+                  likes: filteredSchools.reduce((sum, s) => sum + (s.logo.yes.likes * s.logo.yes.contents), 0),
+                  comments: filteredSchools.reduce((sum, s) => sum + (s.logo.yes.comments * s.logo.yes.contents), 0),
+                  emv: filteredSchools.reduce((sum, s) => sum + (s.logo.yes.emv * s.logo.yes.contents), 0),
                 },
                 withoutIP: {
                   contents: filteredSchools.reduce((sum, s) => sum + s.logo.no.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + s.logo.no.likes, 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + s.logo.no.comments, 0),
+                  likes: filteredSchools.reduce((sum, s) => sum + (s.logo.no.likes * s.logo.no.contents), 0),
+                  comments: filteredSchools.reduce((sum, s) => sum + (s.logo.no.comments * s.logo.no.contents), 0),
                 },
                 avgLift: filteredSchools.length > 0
                   ? filteredSchools.reduce((sum, s) => sum + s.logo.avgLift, 0) / filteredSchools.length
@@ -1356,14 +1356,14 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               const totals = {
                 withIP: {
                   contents: filteredSchools.reduce((sum, s) => sum + s.collaboration.yes.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + s.collaboration.yes.likes, 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + s.collaboration.yes.comments, 0),
-                  emv: filteredSchools.reduce((sum, s) => sum + s.collaboration.yes.emv, 0),
+                  likes: filteredSchools.reduce((sum, s) => sum + (s.collaboration.yes.likes * s.collaboration.yes.contents), 0),
+                  comments: filteredSchools.reduce((sum, s) => sum + (s.collaboration.yes.comments * s.collaboration.yes.contents), 0),
+                  emv: filteredSchools.reduce((sum, s) => sum + (s.collaboration.yes.emv * s.collaboration.yes.contents), 0),
                 },
                 withoutIP: {
                   contents: filteredSchools.reduce((sum, s) => sum + s.collaboration.no.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + s.collaboration.no.likes, 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + s.collaboration.no.comments, 0),
+                  likes: filteredSchools.reduce((sum, s) => sum + (s.collaboration.no.likes * s.collaboration.no.contents), 0),
+                  comments: filteredSchools.reduce((sum, s) => sum + (s.collaboration.no.comments * s.collaboration.no.contents), 0),
                 },
                 avgLift: filteredSchools.length > 0
                   ? filteredSchools.reduce((sum, s) => sum + s.collaboration.avgLift, 0) / filteredSchools.length
@@ -1475,14 +1475,14 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               const totals = {
                 withIP: {
                   contents: filteredSchools.reduce((sum, s) => sum + s.orgInCaption.yes.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + s.orgInCaption.yes.likes, 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + s.orgInCaption.yes.comments, 0),
-                  emv: filteredSchools.reduce((sum, s) => sum + s.orgInCaption.yes.emv, 0),
+                  likes: filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.yes.likes * s.orgInCaption.yes.contents), 0),
+                  comments: filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.yes.comments * s.orgInCaption.yes.contents), 0),
+                  emv: filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.yes.emv * s.orgInCaption.yes.contents), 0),
                 },
                 withoutIP: {
                   contents: filteredSchools.reduce((sum, s) => sum + s.orgInCaption.no.contents, 0),
-                  likes: filteredSchools.reduce((sum, s) => sum + s.orgInCaption.no.likes, 0),
-                  comments: filteredSchools.reduce((sum, s) => sum + s.orgInCaption.no.comments, 0),
+                  likes: filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.no.likes * s.orgInCaption.no.contents), 0),
+                  comments: filteredSchools.reduce((sum, s) => sum + (s.orgInCaption.no.comments * s.orgInCaption.no.contents), 0),
                 },
                 avgLift: filteredSchools.length > 0
                   ? filteredSchools.reduce((sum, s) => sum + s.orgInCaption.avgLift, 0) / filteredSchools.length
