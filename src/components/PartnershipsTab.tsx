@@ -423,10 +423,10 @@ export function PartnershipsTab({
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
-                      {brand.avgLikes.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      {brand.avgLikes.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 })}
                     </td>
                     <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
-                      {brand.avgComments.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      {brand.avgComments.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 })}
                     </td>
                     <td className="px-6 py-4 text-right text-white font-bold font-mono">
                       {formatNumber(brand.totalEngagement)}
@@ -567,10 +567,10 @@ export function PartnershipsTab({
                       {formatNumber(partner.totalContents)}
                     </td>
                     <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
-                      {partner.avgLikes.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      {partner.avgLikes.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 })}
                     </td>
                     <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
-                      {partner.avgComments.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      {partner.avgComments.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 2 })}
                     </td>
                     <td className="px-6 py-4 text-right text-white font-bold font-mono">
                       {formatNumber(totalEngagement)}
