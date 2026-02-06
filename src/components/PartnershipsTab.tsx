@@ -423,10 +423,10 @@ export function PartnershipsTab({
                       </div>
                     </td>
                     <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
-                      {formatNumber(brand.avgLikes)}
+                      {brand.avgLikes.toFixed(2)}
                     </td>
                     <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
-                      {formatNumber(brand.avgComments)}
+                      {brand.avgComments.toFixed(2)}
                     </td>
                     <td className="px-6 py-4 text-right text-white font-bold font-mono">
                       {formatNumber(brand.totalEngagement)}
@@ -567,10 +567,10 @@ export function PartnershipsTab({
                       {formatNumber(partner.totalContents)}
                     </td>
                     <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
-                      {formatNumber(partner.avgLikes)}
+                      {partner.avgLikes.toFixed(2)}
                     </td>
                     <td className="px-6 py-4 text-right text-[#3B9FD9] font-mono">
-                      {formatNumber(partner.avgComments)}
+                      {partner.avgComments.toFixed(2)}
                     </td>
                     <td className="px-6 py-4 text-right text-white font-bold font-mono">
                       {formatNumber(totalEngagement)}
