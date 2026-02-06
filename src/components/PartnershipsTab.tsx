@@ -492,7 +492,7 @@ export function PartnershipsTab({
       )
     : schoolData.sponsorPartners;
 
-  const sortedPartners = [...filteredPartners].sort((a, b) => b.emv - a.emv);
+  const sortedPartners = [...filteredPartners].sort((a, b) => (b.emv * b.totalContents) - (a.emv * a.totalContents));
 
   return (
     <div className="space-y-8">
@@ -581,7 +581,7 @@ export function PartnershipsTab({
                       {(partner.engagementRate * 100).toFixed(2)}%
                     </td>
                     <td className="px-6 py-4 text-right text-green-400 font-bold font-mono">
-                      {formatEMV(partner.emv)}
+                      {formatEMV(partner.emv * partner.totalContents)}
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className={`font-semibold ${
