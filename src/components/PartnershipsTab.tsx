@@ -229,7 +229,7 @@ export function PartnershipsTab({
       <div className="space-y-8">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold text-white">Network Brand Partnerships</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-white">Brand Partnerships</h3>
             <p className="text-white/60 mt-2">Brands leveraging school IP across your network</p>
           </div>
           <div className="text-sm text-white/60">
