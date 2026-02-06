@@ -3,7 +3,7 @@ import { FileText } from 'lucide-react';
 import { SCHOOLS, SchoolConfig } from '../data/schoolConfig';
 import { SchoolReportView } from './SchoolReportView';
 import { PlayflyReportHub } from './PlayflyReportHub';
-import { AuburnCampaignReport } from './AuburnCampaignReport';
+import { AuburnCampaignDashboard } from './AuburnCampaignDashboard';
 
 export function SchoolReportsPage() {
   const [selectedSchool, setSelectedSchool] = useState<SchoolConfig | null>(null);
@@ -21,10 +21,10 @@ export function SchoolReportsPage() {
         />
       );
     }
-    // If Auburn is selected, show campaign report
+    // If Auburn is selected, show campaign dashboard
     if (selectedSchool.id === 'auburn') {
       return (
-        <AuburnCampaignReport onBack={() => setSelectedSchool(null)} />
+        <AuburnCampaignDashboard onBack={() => setSelectedSchool(null)} />
       );
     }
     // If Kentucky is selected, show blank report for now

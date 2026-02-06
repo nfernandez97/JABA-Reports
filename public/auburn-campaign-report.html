@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auburn Athletics - Campaign Performance Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Auburn Brand Colors */
+            --auburn-navy: #0C2340;
+            --auburn-orange: #E87722;
+            --auburn-orange-dark: #C96318;
+            --auburn-orange-light: #F26522;
+            --gold-accent: #FFB612;
+
+            /* Neutrals */
+            --bg-light: #f5f5f5;
+            --bg-white: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-gray: #6b7280;
+            --text-light: #9ca3af;
+            --border-light: #e5e7eb;
+
+            /* Gradients */
+            --gradient-orange: linear-gradient(135deg, #E87722 0%, #C96318 100%);
+            --gradient-navy: linear-gradient(135deg, #0C2340 0%, #1a365d 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.5;
+            min-height: 100vh;
+        }
+
+        /* Texture overlay for cards */
+        .texture-overlay {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .texture-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .texture-overlay > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        .header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-light);
+            padding: 1.25rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .header-title h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--auburn-navy);
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        .header-title p {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .campaign-selector {
+            background: var(--bg-light);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .campaign-selector:hover {
+            border-color: var(--auburn-orange);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-card {
+            background: var(--gradient-orange);
+            border-radius: 16px;
+            padding: 2rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .hero-card > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-value {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-description {
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .hero-stat {
+            padding-right: 1rem;
+        }
+
+        .hero-stat:first-child {
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Metrics Card */
+        .metrics-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-light);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .metric-item {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .metric-item:nth-child(n+4) {
+            border-bottom: none;
+        }
+
+        .metric-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-gray);
+            margin-bottom: 0.25rem;
+        }
+
+        .metric-value {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--text-dark);
+        }
+
+        .metric-divider {
+            width: 1px;
+            background: var(--border-light);
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-light);
+            margin-bottom: 2rem;
+        }
+
+        .section-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--auburn-orange);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            margin-top: 0.25rem;
+        }
+
+        .section-body {
+            padding: 1.5rem;
+        }
+
+        /* Performance vs Benchmark */
+        .benchmark-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 2rem;
+        }
+
+        .gauge-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .gauge-wrapper {
+            position: relative;
+            width: 200px;
+            height: 120px;
+            margin-bottom: 1rem;
+        }
+
+        .gauge-background {
+            fill: none;
+            stroke: var(--bg-light);
+            stroke-width: 20;
+        }
+
+        .gauge-fill {
+            fill: none;
+            stroke: var(--auburn-orange);
+            stroke-width: 20;
+            stroke-linecap: round;
+            transition: stroke-dashoffset 1s ease-out;
+        }
+
+        .gauge-center-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            text-align: center;
+        }
+
+        .gauge-value {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--auburn-orange);
+        }
+
+        .gauge-label {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .gauge-note {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .benchmark-scale {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 200px;
+            margin-bottom: 0.5rem;
+        }
+
+        .scale-text {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .benchmark-baseline {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .baseline-marker {
+            width: 20px;
+            height: 4px;
+            background: var(--text-gray);
+            border-radius: 2px;
+        }
+
+        .baseline-text {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+        }
+
+        /* Top Post Section */
+        .top-post-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .top-post-image {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+            background: var(--bg-light);
+        }
+
+        .top-post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .post-brand-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .top-post-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .athlete-names {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--auburn-navy);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .post-stats {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--auburn-orange);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+        }
+
+        .likes-display {
+            background: var(--auburn-orange);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .likes-value {
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .likes-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Rankings Section */
+        .rankings-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .ranking-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .ranking-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .ranking-number {
+            background: var(--auburn-orange);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        .ranking-info h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .ranking-info p {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+
+        /* Metric Toggle */
+        .metric-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+        }
+
+        .toggle-btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: transparent;
+            color: var(--text-gray);
+        }
+
+        .toggle-btn.active {
+            background: var(--auburn-orange);
+            color: white;
+        }
+
+        .toggle-btn:hover:not(.active) {
+            background: rgba(232, 119, 34, 0.1);
+            color: var(--auburn-orange);
+        }
+
+        .toggle-divider {
+            width: 1px;
+            background: var(--border-light);
+            margin: 0.5rem 0;
+        }
+
+        /* Campaign Lift Section */
+        .lift-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .lift-card {
+            background: var(--bg-light);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .lift-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .lift-image {
+            position: relative;
+            aspect-ratio: 4/3;
+            background: var(--auburn-navy);
+        }
+
+        .lift-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .lift-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem 1rem 1rem;
+        }
+
+        .lift-badge {
+            background: var(--auburn-orange);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .lift-value {
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+
+        .lift-label {
+            font-size: 0.75rem;
+            opacity: 0.9;
+        }
+
+        .lift-details {
+            padding: 1rem;
+            background: white;
+        }
+
+        .lift-comparison {
+            font-size: 0.875rem;
+            color: var(--text-gray);
+        }
+
+        .lift-comparison strong {
+            color: var(--text-dark);
+        }
+
+        /* Performance Bar */
+        .performance-bar-container {
+            padding: 1.5rem;
+        }
+
+        .performance-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--text-gray);
+        }
+
+        .performance-track {
+            height: 12px;
+            background: var(--bg-light);
+            border-radius: 6px;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .performance-bar {
+            height: 100%;
+            background: var(--gradient-orange);
+            border-radius: 6px;
+            position: relative;
+            transition: width 1s ease-out;
+        }
+
+        .performance-marker {
+            position: absolute;
+            top: -8px;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 10px solid var(--auburn-orange);
+        }
+
+        .performance-marker-label {
+            position: absolute;
+            top: -32px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--auburn-orange);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .performance-values {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--text-gray);
+        }
+
+        .campaign-result-text {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(232, 119, 34, 0.1);
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .campaign-result-text p {
+            font-size: 0.875rem;
+            color: var(--text-dark);
+        }
+
+        .campaign-result-text strong {
+            color: var(--auburn-orange);
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-gray);
+            font-size: 0.875rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-logo {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+            }
+
+            .benchmark-container,
+            .top-post-container,
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+
+            .rankings-grid,
+            .lift-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .rankings-grid,
+            .lift-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                padding: 1rem;
+            }
+
+            .hero-value {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+
+        /* Print styles */
+        @media print {
+            .header {
+                position: relative;
+                box-shadow: none;
+            }
+
+            .section-card {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <img src="https://a.espncdn.com/i/teamlogos/ncaa/500/2.png" alt="Auburn" class="logo">
+                <div class="header-title">
+                    <h1>AUBURN</h1>
+                    <p>Campaign Performance Report</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="campaign-selector" id="campaignSelector">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span id="selectedCampaign">Fortnite x Auburn Football</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--text-gray);">War Eagle Intelligence</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section animate-in">
+            <!-- Left Hero Card -->
+            <div class="hero-card texture-overlay">
+                <div class="hero-grid">
+                    <div class="hero-stat">
+                        <p class="hero-label">Total Engagements</p>
+                        <p class="hero-value" id="totalEngagements">38.0K</p>
+                        <p class="hero-description">Driven by 1 high performing post</p>
+                    </div>
+                    <div class="hero-stat">
+                        <p class="hero-label">Earned Media Value</p>
+                        <p class="hero-value" id="totalEMV">$19.1K</p>
+                        <p class="hero-description">Campaign impact value</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Metrics Card -->
+            <div class="metrics-card">
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <p class="metric-label"># of Posts</p>
+                        <p class="metric-value" id="numPosts">1</p>
+                    </div>
+                    <div class="metric-item">
+                        <p class="metric-label">Average EMV</p>
+                        <p class="metric-value" id="avgEMV">$19.1K</p>
+                    </div>
+                    <div class="metric-item">
+                        <p class="metric-label">Total Likes</p>
+                        <p class="metric-value" id="totalLikes">37.9K</p>
+                    </div>
+                    <div class="metric-item">
+                        <p class="metric-label">Athletes</p>
+                        <p class="metric-value" id="numAthletes">2</p>
+                    </div>
+                    <div class="metric-item">
+                        <p class="metric-label">Total Comments</p>
+                        <p class="metric-value" id="totalComments">122</p>
+                    </div>
+                    <div class="metric-item">
+                        <p class="metric-label">Comment to Like Ratio</p>
+                        <p class="metric-value" id="commentRatio">0.32%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metric Toggle -->
+        <div class="metric-toggle animate-in delay-1">
+            <button class="toggle-btn active" data-metric="likes">Likes</button>
+            <div class="toggle-divider"></div>
+            <button class="toggle-btn" data-metric="engagements">Engagements</button>
+            <div class="toggle-divider"></div>
+            <button class="toggle-btn" data-metric="emv">EMV</button>
+        </div>
+
+        <!-- Performance vs Benchmark & Top Post -->
+        <div class="two-column animate-in delay-2">
+            <!-- Campaign Performance vs Benchmark -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">Campaign Performance <span style="color: var(--text-gray); font-weight: 500; text-transform: none;">vs</span> Benchmark</h3>
+                </div>
+                <div class="section-body">
+                    <div class="gauge-container">
+                        <svg width="200" height="120" viewBox="0 0 200 120">
+                            <!-- Background arc -->
+                            <path class="gauge-background" d="M 20 100 A 80 80 0 0 1 180 100" />
+                            <!-- Filled arc (160% = full + 60% extra, capped at full) -->
+                            <path class="gauge-fill" d="M 20 100 A 80 80 0 0 1 180 100"
+                                  stroke-dasharray="251.2"
+                                  stroke-dashoffset="0" />
+                        </svg>
+                        <div class="gauge-center-text">
+                            <p class="gauge-value" id="performanceIndex">+60%</p>
+                            <p class="gauge-label">Performance Index</p>
+                        </div>
+                    </div>
+                    <div class="benchmark-scale">
+                        <span class="scale-text">0%</span>
+                        <span class="scale-text">100%</span>
+                        <span class="scale-text" style="color: var(--auburn-orange); font-weight: 700;">160%</span>
+                    </div>
+                    <div class="benchmark-baseline">
+                        <div class="baseline-marker"></div>
+                        <span class="baseline-text">Sponsored Avg = 100</span>
+                    </div>
+                    <p class="gauge-note" style="margin-top: 1rem;">Based on last 30 sponsored posts</p>
+                </div>
+            </div>
+
+            <!-- Top Performing Post -->
+            <div class="section-card">
+                <div class="section-header">
+                    <h3 class="section-title">Top Performing Post</h3>
+                    <p class="section-subtitle">One post drove nearly all engagement.</p>
+                </div>
+                <div class="section-body">
+                    <div class="top-post-image" style="margin-bottom: 1rem;">
+                        <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&h=400&fit=crop" alt="Campaign Post" id="topPostImage">
+                        <div class="post-brand-badge" id="postBrand">FORTNITE</div>
+                    </div>
+                    <div class="top-post-details">
+                        <h4 class="athlete-names" id="athleteNames">Caleb Downs x Carnell Tate</h4>
+                        <div class="post-stats">
+                            <div class="stat-badge">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                                <span id="topPostPercentage">98% of total likes</span>
+                            </div>
+                        </div>
+                        <div class="likes-display">
+                            <span class="likes-value" id="topPostLikes">37.3K</span>
+                            <span class="likes-label">Likes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Bar Section -->
+        <div class="section-card animate-in delay-3">
+            <div class="section-body">
+                <div class="performance-bar-container">
+                    <div class="performance-labels">
+                        <span>Worst Sponsored</span>
+                        <span>Average</span>
+                        <span>Top Sponsored</span>
+                    </div>
+                    <div class="performance-track">
+                        <div class="performance-bar" style="width: 88%;">
+                            <div class="performance-marker" style="right: 0;">
+                                <div class="performance-marker-label">This Campaign<br>Top 12% of sponsored posts</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="performance-values">
+                        <span>Worst: 420 likes</span>
+                        <span>Median: 18.6K likes</span>
+                        <span>Best: 102.4K likes</span>
+                    </div>
+                </div>
+                <div class="campaign-result-text">
+                    <p>This post <strong>outperformed every athlete's baseline</strong> and ranked in the <strong>top 15%</strong> of all sponsored posts.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rankings Section -->
+        <div class="section-card animate-in delay-3">
+            <div class="section-header">
+                <h3 class="section-title">Campaign Rankings</h3>
+                <p class="section-subtitle">How this campaign performed across different levels</p>
+            </div>
+            <div class="section-body">
+                <div class="rankings-grid">
+                    <div class="ranking-card">
+                        <div class="ranking-number" id="rankSchool">#1</div>
+                        <div class="ranking-info">
+                            <h4>At School</h4>
+                            <p>Auburn University</p>
+                        </div>
+                    </div>
+                    <div class="ranking-card">
+                        <div class="ranking-number" id="rankConference">#3</div>
+                        <div class="ranking-info">
+                            <h4>In the SEC</h4>
+                            <p>Conference Ranking</p>
+                        </div>
+                    </div>
+                    <div class="ranking-card">
+                        <div class="ranking-number" id="rankNCAA">#4</div>
+                        <div class="ranking-info">
+                            <h4>In the NCAA</h4>
+                            <p>All Schools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Campaign Lift Section -->
+        <div class="section-card animate-in delay-4">
+            <div class="section-header">
+                <h3 class="section-title">Campaign Lift vs Typical Posts</h3>
+                <p class="section-subtitle">Baseline: Last 30 posts per account</p>
+            </div>
+            <div class="section-body">
+                <!-- Lift Toggle -->
+                <div class="metric-toggle" style="margin-bottom: 1.5rem;">
+                    <button class="toggle-btn active" data-lift="likes">Likes</button>
+                    <div class="toggle-divider"></div>
+                    <button class="toggle-btn" data-lift="comments">Comments</button>
+                    <div class="toggle-divider"></div>
+                    <button class="toggle-btn" data-lift="engagements">Engagements</button>
+                    <div class="toggle-divider"></div>
+                    <button class="toggle-btn" data-lift="emv">EMV</button>
+                </div>
+
+                <div class="lift-grid" id="liftGrid">
+                    <!-- Athlete 1 -->
+                    <div class="lift-card">
+                        <div class="lift-image">
+                            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=400&h=300&fit=crop" alt="Athlete">
+                            <div class="lift-overlay">
+                                <div class="lift-badge">
+                                    <span class="lift-value">+8.3K Likes</span>
+                                    <span class="lift-label">vs his average post</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lift-details">
+                            <p class="lift-comparison">Campaign: <strong>37.9K</strong> • Avg: <strong>29.6K</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Athlete 2 -->
+                    <div class="lift-card">
+                        <div class="lift-image">
+                            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop" alt="Athlete">
+                            <div class="lift-overlay">
+                                <div class="lift-badge">
+                                    <span class="lift-value">+24.2K Likes</span>
+                                    <span class="lift-label">vs his average post</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lift-details">
+                            <p class="lift-comparison">Campaign: <strong>37.9K</strong> • Avg: <strong>13.7K</strong></p>
+                        </div>
+                    </div>
+
+                    <!-- Auburn Team -->
+                    <div class="lift-card">
+                        <div class="lift-image" style="background: var(--auburn-navy); display: flex; align-items: center; justify-content: center;">
+                            <img src="https://a.espncdn.com/i/teamlogos/ncaa/500/2.png" alt="Auburn" style="width: 80px; height: 80px; object-fit: contain;">
+                            <div class="lift-overlay">
+                                <div class="lift-badge">
+                                    <span class="lift-value">+9.2K Likes</span>
+                                    <span class="lift-label">vs team average post</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lift-details">
+                            <p class="lift-comparison">Campaign: <strong>37.9K</strong> • Avg: <strong>28.7K</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-brand">
+            <img src="https://a.espncdn.com/i/teamlogos/ncaa/500/2.png" alt="Auburn" class="footer-logo">
+            <span style="font-weight: 600; color: var(--auburn-navy);">Auburn Athletics</span>
+        </div>
+        <p>Campaign Analysis Report • War Eagle Intelligence</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem;" id="reportDate"></p>
+    </footer>
+
+    <script>
+        // Sample Campaign Data
+        const campaignData = {
+            school: "Auburn University",
+            campaign: {
+                name: "Fortnite x Auburn Football",
+                posts: 1,
+                athletes: 2
+            },
+            metrics: {
+                totalEngagements: 38000,
+                earnedMediaValue: 19100,
+                averageEMV: "$19.1K",
+                likes: 37900,
+                comments: 122,
+                commentToLikeRatio: "0.32%"
+            },
+            performance: {
+                vsAverage: 160,
+                performanceIndex: 60
+            },
+            rankings: {
+                atSchool: 1,
+                inConference: 3,
+                inNCAAAll: 4
+            },
+            topPost: {
+                title: "Fortnite Collaboration",
+                image: "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=600&h=400&fit=crop",
+                athletes: "Caleb Downs x Carnell Tate",
+                likes: 37300,
+                percentage: 98,
+                brand: "FORTNITE"
+            },
+            campaignLift: [
+                {
+                    athleteName: "Caleb Downs",
+                    image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=400&h=300&fit=crop",
+                    liftAmount: 8300,
+                    campaignAvg: 37900,
+                    athleteAvg: 29600
+                },
+                {
+                    athleteName: "Carnell Tate",
+                    image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=300&fit=crop",
+                    liftAmount: 24200,
+                    campaignAvg: 37900,
+                    athleteAvg: 13700
+                },
+                {
+                    athleteName: "Auburn Team",
+                    image: "https://a.espncdn.com/i/teamlogos/ncaa/500/2.png",
+                    liftAmount: 9200,
+                    campaignAvg: 37900,
+                    athleteAvg: 28700,
+                    isTeam: true
+                }
+            ]
+        };
+
+        // Format numbers
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toString();
+        }
+
+        function formatCurrency(num) {
+            if (num >= 1000000) {
+                return '$' + (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return '$' + (num / 1000).toFixed(1) + 'K';
+            }
+            return '$' + num.toString();
+        }
+
+        // Initialize dashboard with data
+        function initializeDashboard(data) {
+            // Update hero section
+            document.getElementById('totalEngagements').textContent = formatNumber(data.metrics.totalEngagements);
+            document.getElementById('totalEMV').textContent = formatCurrency(data.metrics.earnedMediaValue);
+
+            // Update metrics
+            document.getElementById('numPosts').textContent = data.campaign.posts;
+            document.getElementById('avgEMV').textContent = data.metrics.averageEMV;
+            document.getElementById('totalLikes').textContent = formatNumber(data.metrics.likes);
+            document.getElementById('numAthletes').textContent = data.campaign.athletes;
+            document.getElementById('totalComments').textContent = data.metrics.comments;
+            document.getElementById('commentRatio').textContent = data.metrics.commentToLikeRatio;
+
+            // Update performance
+            document.getElementById('performanceIndex').textContent = '+' + data.performance.performanceIndex + '%';
+
+            // Update rankings
+            document.getElementById('rankSchool').textContent = '#' + data.rankings.atSchool;
+            document.getElementById('rankConference').textContent = '#' + data.rankings.inConference;
+            document.getElementById('rankNCAA').textContent = '#' + data.rankings.inNCAAAll;
+
+            // Update top post
+            document.getElementById('athleteNames').textContent = data.topPost.athletes;
+            document.getElementById('topPostLikes').textContent = formatNumber(data.topPost.likes);
+            document.getElementById('topPostPercentage').textContent = data.topPost.percentage + '% of total likes';
+            document.getElementById('postBrand').textContent = data.topPost.brand;
+
+            // Update selected campaign
+            document.getElementById('selectedCampaign').textContent = data.campaign.name;
+
+            // Update date
+            document.getElementById('reportDate').textContent = new Date().toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        // Toggle button functionality
+        document.querySelectorAll('.toggle-btn[data-metric]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.toggle-btn[data-metric]').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // Add metric switching logic here
+                const metric = this.dataset.metric;
+                console.log('Switched to metric:', metric);
+            });
+        });
+
+        document.querySelectorAll('.toggle-btn[data-lift]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.toggle-btn[data-lift]').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                // Add lift metric switching logic here
+                const lift = this.dataset.lift;
+                console.log('Switched to lift metric:', lift);
+            });
+        });
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeDashboard(campaignData);
+
+            // Add scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.section-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(card);
+            });
+        });
+
+        // Function to update with new campaign data
+        function updateCampaign(newData) {
+            initializeDashboard(newData);
+        }
+    </script>
+</body>
+</html>
