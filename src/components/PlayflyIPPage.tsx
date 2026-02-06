@@ -525,7 +525,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
           <div className="space-y-8">
             <div className="flex items-center justify-between">
               <h3 className="text-2xl md:text-3xl font-bold text-white">
-                {selectedSchool === 'all' ? 'Network Overview' : `${selectedSchool} Overview`}
+                {selectedSchool === 'all' ? 'All Schools Overview' : `${selectedSchool} Overview`}
               </h3>
               {selectedSchool !== 'all' && filteredSchools.length > 0 && (
                 <div className="text-sm text-white/60">
@@ -534,11 +534,11 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
               )}
             </div>
 
-            {/* Network Stats Cards - Combined Playfly School Metrics */}
+            {/* Combined Stats Cards - All Playfly School Metrics */}
             {selectedSchool === 'all' && (
               <div className="space-y-4">
                 <div>
-                  <h4 className="text-2xl font-bold text-white">Network-Wide Performance</h4>
+                  <h4 className="text-2xl font-bold text-white">Combined Performance</h4>
                   <p className="text-white/60 text-sm mt-1">Combined metrics across all {networkTotals.totalSchools} Playfly partner schools</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1009,7 +1009,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                             ? ' - significant opportunity to increase IP usage'
                             : adoptionRate < 75
                             ? ' - good adoption with room for growth'
-                            : ' - strong IP adoption across the network'
+                            : ' - strong IP adoption across all schools'
                           }
                         </p>
                       </div>
