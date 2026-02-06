@@ -147,7 +147,7 @@ export function PartnershipsTab({
         if (existing) {
           existing.totalPosts += partner.totalContents;
           existing.schools.add(school.school.name);
-          existing.totalEMV += partner.emv;
+          existing.totalEMV += partner.emv * partner.totalContents;
           existing.avgEngagement += partner.engagementRate;
           existing.engagementLift.push(partner.engagementRateLift);
           existing.totalLikes += partner.avgLikes * partner.totalContents;
@@ -157,7 +157,7 @@ export function PartnershipsTab({
             name: partner.sponsorPartner,
             totalPosts: partner.totalContents,
             schools: new Set([school.school.name]),
-            totalEMV: partner.emv,
+            totalEMV: partner.emv * partner.totalContents,
             avgEngagement: partner.engagementRate,
             engagementLift: [partner.engagementRateLift],
             totalLikes: partner.avgLikes * partner.totalContents,
@@ -514,7 +514,7 @@ export function PartnershipsTab({
         <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
           <div className="text-sm text-white/60 mb-2">Total EMV</div>
           <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-400">
-            {formatEMV(schoolData.sponsorPartners.reduce((sum, p) => sum + p.emv, 0))}
+            {formatEMV(schoolData.sponsorPartners.reduce((sum, p) => sum + (p.emv * p.totalContents), 0))}
           </div>
         </div>
       </div>
