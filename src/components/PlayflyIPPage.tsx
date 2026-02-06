@@ -438,14 +438,17 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
         <div className="sticky top-0 z-40 bg-[#091831] pb-4 -mx-6 px-6 mb-8 shadow-lg">
           {/* School Selector */}
           <div className="pt-4 pb-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div>
-              <label className="text-sm text-white/60 mb-2 block">Select View</label>
+            <div className="w-full md:w-auto">
+              <label className="text-base font-semibold text-white mb-3 flex items-center gap-2">
+                <span className="text-xl">🏫</span>
+                Filter by School:
+              </label>
               <select
                 value={selectedSchool}
                 onChange={(e) => setSelectedSchool(e.target.value)}
-                className="bg-black/40 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none w-full md:min-w-[300px] md:w-auto"
+                className="bg-black/40 border-2 border-white/30 rounded-lg px-5 py-3 text-white text-base font-medium focus:border-[#3B9FD9] hover:border-[#3B9FD9] focus:outline-none transition-colors w-full md:min-w-[350px] cursor-pointer"
               >
-                <option value="all">All Schools</option>
+                <option value="all">All Schools ({schoolsData.length})</option>
                 <optgroup label="Individual Schools">
                   {schoolsData.map((school) => (
                     <option key={school.school._id} value={school.school.name}>
