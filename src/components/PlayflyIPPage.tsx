@@ -389,7 +389,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#091831] via-[#0B1F3D] to-[#091831] text-white p-8">
+    <div className="min-h-screen bg-gradient-to-br from-[#091831] via-[#0B1F3D] to-[#091831] text-white p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Back button */}
         {onBack && (
@@ -407,9 +407,9 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900" />
 
           {/* Content */}
-          <div className="relative z-10 p-12">
+          <div className="relative z-10 p-6 md:p-12">
             {/* Headline with highlighted stats */}
-            <h2 className="text-5xl font-bold mb-8 leading-tight">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 leading-tight">
               <span className="text-white">JABA analyzed </span>
               <span className="text-[#3B9FD9] bg-[#1770C0]/20 px-3 py-1 rounded-lg">{formatNumber(networkTotals.totalContents)} posts</span>
               <span className="text-white"> across </span>
@@ -437,13 +437,13 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
         {/* Sticky Header: School Selector + Tabs */}
         <div className="sticky top-0 z-40 bg-[#091831] pb-4 -mx-6 px-6 mb-8 shadow-lg">
           {/* School Selector */}
-          <div className="pt-4 pb-4 flex items-center justify-between">
+          <div className="pt-4 pb-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
             <div>
               <label className="text-sm text-white/60 mb-2 block">Select View</label>
               <select
                 value={selectedSchool}
                 onChange={(e) => setSelectedSchool(e.target.value)}
-                className="bg-black/40 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none min-w-[300px]"
+                className="bg-black/40 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none w-full md:min-w-[300px] md:w-auto"
               >
                 <option value="all">All Schools</option>
                 <optgroup label="Individual Schools">
@@ -466,10 +466,10 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
           </div>
 
           {/* Tabbed Navigation */}
-          <div className="flex gap-4 border-b border-white/20">
+          <div className="flex gap-2 md:gap-4 border-b border-white/20 overflow-x-auto scrollbar-hide -mx-6 px-6">
             <button
               onClick={() => setActiveTab('overview')}
-              className={`px-6 py-3 font-semibold transition-all ${
+              className={`px-4 md:px-6 py-3 font-semibold transition-all whitespace-nowrap text-sm md:text-base ${
                 activeTab === 'overview'
                   ? 'text-[#3B9FD9] border-b-2 border-[#3B9FD9]'
                   : 'text-white/60 hover:text-white'
@@ -479,7 +479,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
             </button>
             <button
               onClick={() => setActiveTab('with-vs-without')}
-              className={`px-6 py-3 font-semibold transition-all ${
+              className={`px-4 md:px-6 py-3 font-semibold transition-all whitespace-nowrap text-sm md:text-base ${
                 activeTab === 'with-vs-without'
                   ? 'text-[#3B9FD9] border-b-2 border-[#3B9FD9]'
                   : 'text-white/60 hover:text-white'
@@ -489,7 +489,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
             </button>
             <button
               onClick={() => setActiveTab('partnerships')}
-              className={`px-6 py-3 font-semibold transition-all ${
+              className={`px-4 md:px-6 py-3 font-semibold transition-all whitespace-nowrap text-sm md:text-base ${
                 activeTab === 'partnerships'
                   ? 'text-[#3B9FD9] border-b-2 border-[#3B9FD9]'
                   : 'text-white/60 hover:text-white'
@@ -499,7 +499,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
             </button>
             <button
               onClick={() => setActiveTab('athletes')}
-              className={`px-6 py-3 font-semibold transition-all ${
+              className={`px-4 md:px-6 py-3 font-semibold transition-all whitespace-nowrap text-sm md:text-base ${
                 activeTab === 'athletes'
                   ? 'text-[#3B9FD9] border-b-2 border-[#3B9FD9]'
                   : 'text-white/60 hover:text-white'
@@ -509,7 +509,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
             </button>
             <button
               onClick={() => setActiveTab('rankings')}
-              className={`px-6 py-3 font-semibold transition-all ${
+              className={`px-4 md:px-6 py-3 font-semibold transition-all whitespace-nowrap text-sm md:text-base ${
                 activeTab === 'rankings'
                   ? 'text-[#3B9FD9] border-b-2 border-[#3B9FD9]'
                   : 'text-white/60 hover:text-white'
@@ -524,7 +524,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
         {activeTab === 'overview' && (
           <div className="space-y-8">
             <div className="flex items-center justify-between">
-              <h3 className="text-3xl font-bold text-white">
+              <h3 className="text-2xl md:text-3xl font-bold text-white">
                 {selectedSchool === 'all' ? 'Network Overview' : `${selectedSchool} Overview`}
               </h3>
               {selectedSchool !== 'all' && filteredSchools.length > 0 && (
@@ -546,7 +546,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="flex items-center justify-between mb-2">
                       <Users className="w-6 h-6 text-[#1770C0]" />
                     </div>
-                    <div className="text-4xl font-bold text-[#FFFF00] mb-1">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#FFFF00] mb-1">
                       {formatNumber(networkTotals.totalFollowers)}
                     </div>
                     <div className="text-sm text-white/60">Total Followers</div>
@@ -556,7 +556,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="flex items-center justify-between mb-2">
                       <BarChart3 className="w-6 h-6 text-[#1770C0]" />
                     </div>
-                    <div className="text-4xl font-bold text-white mb-1">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1">
                       {formatNumber(networkTotals.totalContents)}
                     </div>
                     <div className="text-sm text-white/60">Total Posts</div>
@@ -566,7 +566,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="flex items-center justify-between mb-2">
                       <TrendingUp className="w-6 h-6 text-[#1770C0]" />
                     </div>
-                    <div className="text-4xl font-bold text-white mb-1">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1">
                       {formatNumber(networkTotals.totalLikes + networkTotals.totalComments)}
                     </div>
                     <div className="text-sm text-white/60">Total Engagement</div>
@@ -576,7 +576,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="flex items-center justify-between mb-2">
                       <Award className="w-6 h-6 text-[#1770C0]" />
                     </div>
-                    <div className="text-4xl font-bold text-white mb-1">
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1">
                       {formatEMV(networkTotals.totalEMV)}
                     </div>
                     <div className="text-sm text-white/60">Total EMV</div>
@@ -832,7 +832,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   <div className="space-y-4">
                     <div>
                       <div className="text-sm text-white/60 mb-1">Posts with Logo</div>
-                      <div className="text-3xl font-bold text-white">
+                      <div className="text-2xl md:text-3xl font-bold text-white">
                         {formatNumber(networkTotals.totalWithLogo)}
                       </div>
                       <div className="text-xs text-white/60 mt-1">
@@ -882,7 +882,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   <div className="space-y-4">
                     <div>
                       <div className="text-sm text-white/60 mb-1">Posts with Mentions</div>
-                      <div className="text-3xl font-bold text-white">
+                      <div className="text-2xl md:text-3xl font-bold text-white">
                         {formatNumber(networkTotals.totalWithCaption)}
                       </div>
                       <div className="text-xs text-white/60 mt-1">
@@ -934,7 +934,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                   <div className="space-y-4">
                     <div>
                       <div className="text-sm text-white/60 mb-1">Collaboration Posts</div>
-                      <div className="text-3xl font-bold text-white">
+                      <div className="text-2xl md:text-3xl font-bold text-white">
                         {formatNumber(networkTotals.totalWithCollaboration)}
                       </div>
                       <div className="text-xs text-white/60 mt-1">
@@ -1196,7 +1196,7 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
 
         {activeTab === 'with-vs-without' && (
           <div className="space-y-8">
-            <h3 className="text-3xl font-bold text-white">IP Impact Analysis</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-white">IP Impact Analysis</h3>
             <p className="text-white/60">Compare performance of posts with and without IP usage</p>
 
             {/* IP Type Sub-tabs */}
@@ -1273,11 +1273,11 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="space-y-4">
                       <div>
                         <div className="text-sm text-white/60 mb-1">Posts</div>
-                        <div className="text-3xl font-bold text-white">{formatNumber(totals.withIP.contents)}</div>
+                        <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withIP.contents)}</div>
                       </div>
                       <div>
                         <div className="text-sm text-white/60 mb-1">Total Engagement</div>
-                        <div className="text-3xl font-bold text-white">
+                        <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withIP.likes + totals.withIP.comments)}
                         </div>
                       </div>
@@ -1308,11 +1308,11 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="space-y-4">
                       <div>
                         <div className="text-sm text-white/60 mb-1">Posts</div>
-                        <div className="text-3xl font-bold text-white">{formatNumber(totals.withoutIP.contents)}</div>
+                        <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withoutIP.contents)}</div>
                       </div>
                       <div>
                         <div className="text-sm text-white/60 mb-1">Total Engagement</div>
-                        <div className="text-3xl font-bold text-white">
+                        <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withoutIP.likes + totals.withoutIP.comments)}
                         </div>
                       </div>
@@ -1392,11 +1392,11 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="space-y-4">
                       <div>
                         <div className="text-sm text-white/60 mb-1">Posts</div>
-                        <div className="text-3xl font-bold text-white">{formatNumber(totals.withIP.contents)}</div>
+                        <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withIP.contents)}</div>
                       </div>
                       <div>
                         <div className="text-sm text-white/60 mb-1">Total Engagement</div>
-                        <div className="text-3xl font-bold text-white">
+                        <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withIP.likes + totals.withIP.comments)}
                         </div>
                       </div>
@@ -1427,11 +1427,11 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="space-y-4">
                       <div>
                         <div className="text-sm text-white/60 mb-1">Posts</div>
-                        <div className="text-3xl font-bold text-white">{formatNumber(totals.withoutIP.contents)}</div>
+                        <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withoutIP.contents)}</div>
                       </div>
                       <div>
                         <div className="text-sm text-white/60 mb-1">Total Engagement</div>
-                        <div className="text-3xl font-bold text-white">
+                        <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withoutIP.likes + totals.withoutIP.comments)}
                         </div>
                       </div>
@@ -1511,11 +1511,11 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="space-y-4">
                       <div>
                         <div className="text-sm text-white/60 mb-1">Posts</div>
-                        <div className="text-3xl font-bold text-white">{formatNumber(totals.withIP.contents)}</div>
+                        <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withIP.contents)}</div>
                       </div>
                       <div>
                         <div className="text-sm text-white/60 mb-1">Total Engagement</div>
-                        <div className="text-3xl font-bold text-white">
+                        <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withIP.likes + totals.withIP.comments)}
                         </div>
                       </div>
@@ -1546,11 +1546,11 @@ export function PlayflyIPPage({ onBack }: PlayflyIPPageProps) {
                     <div className="space-y-4">
                       <div>
                         <div className="text-sm text-white/60 mb-1">Posts</div>
-                        <div className="text-3xl font-bold text-white">{formatNumber(totals.withoutIP.contents)}</div>
+                        <div className="text-2xl md:text-3xl font-bold text-white">{formatNumber(totals.withoutIP.contents)}</div>
                       </div>
                       <div>
                         <div className="text-sm text-white/60 mb-1">Total Engagement</div>
-                        <div className="text-3xl font-bold text-white">
+                        <div className="text-2xl md:text-3xl font-bold text-white">
                           {formatNumber(totals.withoutIP.likes + totals.withoutIP.comments)}
                         </div>
                       </div>

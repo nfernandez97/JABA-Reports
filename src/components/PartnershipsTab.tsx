@@ -229,7 +229,7 @@ export function PartnershipsTab({
       <div className="space-y-8">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-3xl font-bold text-white">Network Brand Partnerships</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-white">Network Brand Partnerships</h3>
             <p className="text-white/60 mt-2">Brands leveraging school IP across your network</p>
           </div>
           <div className="text-sm text-white/60">
@@ -241,22 +241,22 @@ export function PartnershipsTab({
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
             <div className="text-sm text-white/60 mb-2">Sponsored Posts</div>
-            <div className="text-4xl font-bold text-[#3B9FD9]">
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#3B9FD9]">
               {formatNumber(schoolPartnershipData.reduce((sum, s) =>
                 sum + s.sponsorPartners.reduce((pSum, p) => pSum + p.totalContents, 0), 0))}
             </div>
           </div>
           <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
             <div className="text-sm text-white/60 mb-2">Active Brands</div>
-            <div className="text-4xl font-bold text-white">{brandsArray.length}</div>
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{brandsArray.length}</div>
           </div>
           <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
             <div className="text-sm text-white/60 mb-2">Active Schools</div>
-            <div className="text-4xl font-bold text-white">{schoolPartnershipData.length}</div>
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{schoolPartnershipData.length}</div>
           </div>
           <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
             <div className="text-sm text-white/60 mb-2">Total EMV</div>
-            <div className="text-4xl font-bold text-green-400">
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-400">
               {formatEMV(brandsArray.reduce((sum, b) => sum + b.totalEMV, 0))}
             </div>
           </div>
