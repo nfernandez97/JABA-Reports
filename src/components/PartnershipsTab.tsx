@@ -345,34 +345,36 @@ export function PartnershipsTab({
         </div>
 
         {/* Search and Filters */}
-        <div className="bg-black/40 border border-white/10 rounded-xl p-6">
-          <div className="flex flex-col md:flex-row gap-4 items-end">
-            <div className="flex-1">
-              <label className="text-sm text-white/60 mb-2 block">Search Brands</label>
-              <input
-                type="text"
-                placeholder="Search brands..."
-                value={partnershipSearchQuery}
-                onChange={(e) => setPartnershipSearchQuery(e.target.value)}
-                className="w-full bg-black/60 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none"
-              />
+        <div className="bg-black/40 border border-white/10 rounded-xl p-4 md:p-6">
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex-1">
+                <label className="text-sm text-white/60 mb-2 block">Search Brands</label>
+                <input
+                  type="text"
+                  placeholder="Search brands..."
+                  value={partnershipSearchQuery}
+                  onChange={(e) => setPartnershipSearchQuery(e.target.value)}
+                  className="w-full bg-black/60 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none"
+                />
+              </div>
+
+              <div className="w-full md:w-auto md:min-w-[200px]">
+                <label className="text-sm text-white/60 mb-2 block">Engagement Level</label>
+                <select
+                  value={engagementFilter}
+                  onChange={(e) => setEngagementFilter(e.target.value as any)}
+                  className="w-full bg-black/60 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none"
+                >
+                  <option value="all">All Engagement</option>
+                  <option value="high">High (&gt;100% lift)</option>
+                  <option value="mid">Mid (0-100% lift)</option>
+                  <option value="low">Low (&lt;0% lift)</option>
+                </select>
+              </div>
             </div>
 
-            <div>
-              <label className="text-sm text-white/60 mb-2 block">Engagement Level</label>
-              <select
-                value={engagementFilter}
-                onChange={(e) => setEngagementFilter(e.target.value as any)}
-                className="bg-black/60 border border-white/20 rounded-lg px-4 py-2 text-white focus:border-[#3B9FD9] focus:outline-none"
-              >
-                <option value="all">All Engagement</option>
-                <option value="high">High (&gt;100% lift)</option>
-                <option value="mid">Mid (0-100% lift)</option>
-                <option value="low">Low (&lt;0% lift)</option>
-              </select>
-            </div>
-
-            <div className="text-sm text-white/60">
+            <div className="text-sm text-white/60 text-center md:text-left">
               Showing {displayedBrands.length} of {engagementFilteredBrands.length} brands
             </div>
           </div>
@@ -475,7 +477,7 @@ export function PartnershipsTab({
   if (!schoolData) {
     return (
       <div className="space-y-8">
-        <h3 className="text-3xl font-bold text-white">{selectedSchool} - Brand Partnerships</h3>
+        <h3 className="text-2xl md:text-3xl font-bold text-white">{selectedSchool} - Brand Partnerships</h3>
         <div className="bg-black/40 border border-white/10 rounded-xl p-8 text-center">
           <p className="text-white/60">No partnership data available for this school</p>
         </div>
@@ -495,7 +497,7 @@ export function PartnershipsTab({
   return (
     <div className="space-y-8">
       <div>
-        <h3 className="text-3xl font-bold text-white">{selectedSchool} - Brand Partnerships</h3>
+        <h3 className="text-2xl md:text-3xl font-bold text-white">{selectedSchool} - Brand Partnerships</h3>
         <p className="text-white/60 mt-2">Brands working with your school's athletes</p>
       </div>
 
@@ -503,15 +505,15 @@ export function PartnershipsTab({
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
           <div className="text-sm text-white/60 mb-2">Total Brands</div>
-          <div className="text-4xl font-bold text-white">{schoolData.sponsorPartners.length}</div>
+          <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{schoolData.sponsorPartners.length}</div>
         </div>
         <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
           <div className="text-sm text-white/60 mb-2">Total Posts</div>
-          <div className="text-4xl font-bold text-white">{formatNumber(schoolData.overall.totalContents)}</div>
+          <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">{formatNumber(schoolData.overall.totalContents)}</div>
         </div>
         <div className="bg-black/40 border-2 border-[#1770C0] rounded-xl p-6">
           <div className="text-sm text-white/60 mb-2">Total EMV</div>
-          <div className="text-4xl font-bold text-green-400">
+          <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-green-400">
             {formatEMV(schoolData.sponsorPartners.reduce((sum, p) => sum + p.emv, 0))}
           </div>
         </div>
